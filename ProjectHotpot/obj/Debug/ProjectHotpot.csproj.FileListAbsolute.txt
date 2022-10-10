@@ -1,0 +1,11 @@
+D:\Winform\ProjectHotpot\ProjectHotpot\bin\Debug\ProjectHotpot.exe.config
+D:\Winform\ProjectHotpot\ProjectHotpot\bin\Debug\ProjectHotpot.exe
+D:\Winform\ProjectHotpot\ProjectHotpot\bin\Debug\ProjectHotpot.pdb
+D:\Winform\ProjectHotpot\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.AssemblyReference.cache
+D:\Winform\ProjectHotpot\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.SuggestedBindingRedirects.cache
+D:\Winform\ProjectHotpot\ProjectHotpot\obj\Debug\ProjectHotpot.LoginForm.resources
+D:\Winform\ProjectHotpot\ProjectHotpot\obj\Debug\ProjectHotpot.Properties.Resources.resources
+D:\Winform\ProjectHotpot\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.GenerateResource.cache
+D:\Winform\ProjectHotpot\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.CoreCompileInputs.cache
+D:\Winform\ProjectHotpot\ProjectHotpot\obj\Debug\ProjectHotpot.exe
+D:\Winform\ProjectHotpot\ProjectHotpot\obj\Debug\ProjectHotpot.pdb
