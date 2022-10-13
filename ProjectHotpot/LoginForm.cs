@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjectHotpot
 {
@@ -17,6 +18,8 @@ namespace ProjectHotpot
         public LoginForm()
         {
             InitializeComponent();
+            txtPassword.MaxLength = 14;
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -39,6 +42,49 @@ namespace ProjectHotpot
             {
                 MessageBox.Show("Your Username or Password incorrect!!!");
             }
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+           if(txtUserName.Text == "Username")
+            {
+                txtUserName.Text = "";
+            }
+        }
+        private void txtUserName_Click(object sender, EventArgs e)
+        {
+            if (txtUserName.Text == "Username")
+            {
+                txtUserName.Text = "";
+            }
+        }
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Password")
+            {
+                txtPassword.Text = "";
+            }
+        }
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = '*';
+
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
