@@ -13,7 +13,14 @@ namespace ProjectHotpot.DAO
 {
     internal class EmployeeDAO
     {
+        MyDBDataContext db = new MyDBDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString); // in App .conf ig
         String strCon = ConfigurationManager.ConnectionStrings["strCon"].ConnectionString;
+        public List<Employee> SelectAll()
+        {
+
+            List<Employee> employees = db.Employees.ToList();
+            return employees;
+        }
 
         public Employee SelectByUsername(String userName)
         {

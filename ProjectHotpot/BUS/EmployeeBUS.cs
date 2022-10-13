@@ -11,6 +11,11 @@ namespace ProjectHotpot.BUS
 {
     internal class EmployeeBUS
     {
+        public List<Employee> GetAll()
+        {
+            List<Employee> employees = new EmployeeDAO().SelectAll();
+            return employees;
+        }
         public Employee GetDetails(String userName)
         {
             Employee employee = new EmployeeDAO().SelectByUsername(userName);
