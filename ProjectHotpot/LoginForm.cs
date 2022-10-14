@@ -31,7 +31,7 @@ namespace ProjectHotpot
             {
                 if(employee.Username.Equals(userName) && employee.Password.Equals(password))
                 {
-                    MessageBox.Show("Hello User Login Successful");
+                    MessageBox.Show("Hello " +employee.EmployeeName+ " Login Successful");
                 }
                 else
                 {
@@ -46,21 +46,21 @@ namespace ProjectHotpot
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
         {
-           if(txtUserName.Text == "Username")
+           if(txtUserName.Text.Equals("Username"))
             {
                 txtUserName.Text = "";
             }
         }
         private void txtUserName_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == "Username")
+            if (txtUserName.Text.Equals("Username"))
             {
                 txtUserName.Text = "";
             }
         }
         private void txtPassword_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "Password")
+            if (txtPassword.Text.Equals("Password"))
             {
                 txtPassword.Text = "";
             }
@@ -72,17 +72,7 @@ namespace ProjectHotpot
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

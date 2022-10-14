@@ -31,34 +31,28 @@ namespace ProjectHotpot
                     emp.EmployeeStatus,
                     emp.Position,
                     emp.Username,
-                    emp.Password,
                     "Edit",
                     "Delete"
                 });
             }
 
         }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new AddEditForm().ShowDialog();
-        }
-
        
-
         private void dgvEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7) //edit
+            if (e.ColumnIndex == 6) //edit
             {
                 new AddEditForm((Employee)dgvEmployee.CurrentRow.Tag).ShowDialog();
             }
-            else if (e.ColumnIndex == 8) //update
+            else if (e.ColumnIndex == 7) //Delete
             {
 
             }
         }
 
-       
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            new AddEditForm().ShowDialog();
+        }
     }
 }
