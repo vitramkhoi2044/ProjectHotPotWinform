@@ -26,22 +26,18 @@ namespace ProjectHotpot
         {
             String userName = txtUserName.Text.ToString().Trim();
             String password = txtPassword.Text.ToString().Trim();
-            Employee employee = new EmployeeBUS().GetDetails(userName);
-            if(employee != null)
+            bool result = new EmployeeBUS().Login(userName, password);
+            if (result)
             {
-                if(employee.Username.Equals(userName) && employee.Password.Equals(password))
-                {
-                    MessageBox.Show("Hello " +employee.EmployeeName+ " Login Successful");
-                }
-                else
-                {
-                    MessageBox.Show("Your Username or Password incorrect!!!");
-                }
+                MessageBox.Show("Login Sucessful Welcome to my app");
             }
             else
             {
-                MessageBox.Show("Your Username or Password incorrect!!!");
+                MessageBox.Show("Your Username or Password incorrect!!! Please try again");
+                txtPassword.Text = "";
+                txtUserName.Focus();
             }
+            
         }
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
@@ -68,8 +64,6 @@ namespace ProjectHotpot
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = '*';
-
-
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

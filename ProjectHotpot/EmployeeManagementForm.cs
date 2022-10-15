@@ -35,7 +35,6 @@ namespace ProjectHotpot
                     "Delete"
                 });
             }
-
         }
        
         private void dgvEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -52,7 +51,33 @@ namespace ProjectHotpot
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            new AddEditForm().ShowDialog();
+            AddEditForm addEditForm =  new AddEditForm();
+            addEditForm.ShowDialog();
+            if (addEditForm.getAddStatus())
+            {
+                loadListEmployee();
+            }
+
+
+        }
+        public void loadListEmployee()
+        {
+            List<Employee> emps = new BUS.EmployeeBUS().GetAll();
+            dgvEmployee.Rows.Clear();
+            foreach (var emp in emps)
+            {
+                dgvEmployee.Rows.Add(new object[]
+                {
+                    emp.EmployeeID,
+                    emp.EmployeeName,
+                    emp.Shift,
+                    emp.EmployeeStatus,
+                    emp.Position,
+                    emp.Username,
+                    "Edit",
+                    "Delete"
+                });
+            }
         }
     }
 }

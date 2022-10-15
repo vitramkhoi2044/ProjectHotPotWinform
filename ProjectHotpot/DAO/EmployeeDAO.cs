@@ -1,9 +1,12 @@
-﻿using ProjectHotpot.DTO;
+﻿using ProjectHotpot.BUS;
+using ProjectHotpot.DTO;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.PeerToPeer;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,39 +16,57 @@ namespace ProjectHotpot.DAO
 {
     internal class EmployeeDAO
     {
-        MyDBDataContext db = new MyDBDataContext(ConfigurationManager.ConnectionStrings["strCon"].ConnectionString); // in App .conf ig
-        String strCon = ConfigurationManager.ConnectionStrings["strCon"].ConnectionString;
+        public EmployeeDAO()
+        {
+            new SqlDataAccessHelper();
+        }
         public List<Employee> SelectAll()
         {
-
-            List<Employee> employees = db.Employees.ToList();
+            string query = "Select * From Employees";
+            DataTable dataTable = SqlDataAccessHelper.ExecuteSelectAllQuery(query);
+            List<Employee> employees = new List<Employee>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Employee employee = new Employee();
+                employee.EmployeeID = int.Parse(row["EmployeeID"].ToString());
+                employee.EmployeeName = row["EmployeeName"].ToString();
+                employee.Shift = row["Shift"].ToString();
+                employee.EmployeeStatus = row["EmployeeStatus"].ToString();
+                employee.Position = row["Position"].ToString();
+                employee.Username = row["Username"].ToString();
+                employees.Add(employee);
+            }
             return employees;
         }
 
         public Employee SelectByUsername(String userName)
         {
-            Employee employee = null;
-            SqlConnection con = new SqlConnection(strCon);
-            con.Open();
-            String strCom = "Select * From Employees Where Username = @userName";
-            SqlCommand com = new SqlCommand(strCom, con);
-            com.Parameters.Add(new SqlParameter("@userName", userName));
-            SqlDataReader dr = com.ExecuteReader();
-            if (dr.Read())
+            string query = "Select * From Employees Where Username = @userName";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@username", userName);
+            DataTable dataTable = SqlDataAccessHelper.ExecuteSelectQuery(query, sqlParameters);
+            if (dataTable.Rows.Count > 0)
             {
-                employee = new Employee()
-                {
-                    EmployeeID = (int)dr["EmployeeID"],
-                    EmployeeName = (String)dr["EmployeeName"],
-                    Shift = (String)dr["Shift"],
-                    EmployeeStatus = (String)dr["EmployeeStatus"],
-                    Position = (String)dr["Position"],
-                    Username = (String)dr["Username"],
-                    Password = (String)dr["Password"]
-                };
+                Employee employee = new Employee();
+                DataRow row = dataTable.Rows[0];
+                employee.Username = row["Username"].ToString();
+                employee.Password = row["Password"].ToString();
+                return employee;
             }
-            con.Close();
-            return employee;
+            return null;
+        }
+        public bool Insert(Employee newEmployee)
+        {
+            string query = "Insert into Employees(EmployeeName,Shift,EmployeeStatus,Position,Username,Password) Values(@EmployeeName,@Shift,@EmployeeStatus,@Position,@Username,@Password)";
+            SqlParameter[] sqlParameters = new SqlParameter[6];
+            sqlParameters[0] = new SqlParameter("@EmployeeName", newEmployee.EmployeeName);
+            sqlParameters[1] = new SqlParameter("@Shift", newEmployee.Shift);
+            sqlParameters[2] = new SqlParameter("@EmployeeStatus", newEmployee.EmployeeStatus);
+            sqlParameters[3] = new SqlParameter("@Position", newEmployee.Position);
+            sqlParameters[4] = new SqlParameter("@Username", newEmployee.Username);
+            sqlParameters[5] = new SqlParameter("@Password", newEmployee.Password);
+            bool result = SqlDataAccessHelper.ExecuteInsertQuery(query,sqlParameters);
+            return result;
         }
     }
 }

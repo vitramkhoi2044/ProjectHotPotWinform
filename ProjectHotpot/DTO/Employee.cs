@@ -7,7 +7,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProjectHotpot.DTO
 {
-    internal class Employee
+    public partial class Employee
     {
         public int EmployeeID { get; set; }
         public String EmployeeName { get; set; }
