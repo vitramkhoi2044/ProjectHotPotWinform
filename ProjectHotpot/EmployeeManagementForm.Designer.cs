@@ -56,7 +56,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(8)))), ((int)(((byte)(21)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1308, 113);
             this.panel1.TabIndex = 0;
@@ -81,7 +81,7 @@
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.dgvEmployee);
             this.panel2.Location = new System.Drawing.Point(44, 143);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1215, 559);
             this.panel2.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::ProjectHotpot.Properties.Resources.image_2022_10_13_223421742;
             this.pictureBox1.Location = new System.Drawing.Point(917, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +101,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(947, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(227, 22);
             this.textBox1.TabIndex = 2;
@@ -113,7 +113,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(39, 20);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(156, 36);
             this.btnAdd.TabIndex = 1;
@@ -138,7 +138,7 @@
             this.Edit,
             this.Delete});
             this.dgvEmployee.Location = new System.Drawing.Point(67, 76);
-            this.dgvEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.ReadOnly = true;
             this.dgvEmployee.RowHeadersVisible = false;
@@ -146,6 +146,7 @@
             this.dgvEmployee.Size = new System.Drawing.Size(1084, 352);
             this.dgvEmployee.TabIndex = 0;
             this.dgvEmployee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_CellClick);
+            this.dgvEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_CellContentClick);
             // 
             // Column1
             // 
@@ -239,7 +240,7 @@
             this.ClientSize = new System.Drawing.Size(1311, 842);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EmployeeManagementForm";
             this.Text = "EmployeeManagementForm";
             this.Load += new System.EventHandler(this.EmployeeManagementForm_Load);

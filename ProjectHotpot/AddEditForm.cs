@@ -18,6 +18,7 @@ namespace ProjectHotpot
     {
         Employee employee = null;
         private bool addStatus = false;
+        private bool updateStatus = false;
         public AddEditForm()
         {
             InitializeComponent();
@@ -27,13 +28,21 @@ namespace ProjectHotpot
             addStatus = false;
         }
 
-        public AddEditForm(Employee employee)
+        public AddEditForm(int ID)
         {
             InitializeComponent();
             lblTitle.Text = "Update nhân viên";
             btnAdd.Visible = false;
             btnUpdate.Visible = true;
-            this.employee = employee;
+            labelUserName.Visible = false;
+            txtUsername.Visible = false;
+            updateStatus = false;
+            this.employee = new EmployeeBUS().GetDetails(ID);
+            txtName.Text = this.employee.EmployeeName;
+            cbShift.Text = this.employee.Shift;
+            cbStatus.Text= this.employee.EmployeeStatus;
+            cbPosition.Text=this.employee.Position;
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -65,7 +74,32 @@ namespace ProjectHotpot
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            Employee newEmployee = new Employee
+            {
+                EmployeeID = this.employee.EmployeeID,
+                EmployeeName = txtName.Text.ToString().Trim(),
+                Shift = cbShift.Text.ToString().Trim(),
+                EmployeeStatus = cbStatus.Text.ToString().Trim(),
+                Position = cbPosition.Text.ToString().Trim(),
+                Username = this.employee.Username,
+                Password = this.employee.Password,
+            };
+            bool result = new EmployeeBUS().UpdateEmployee(newEmployee);
+            if (result)
+            {
+                MessageBox.Show("Update employee sucessful!!!");
+                updateStatus = true;
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Sorry update employee fail!!!"
+                    +newEmployee.EmployeeID+" "+newEmployee.EmployeeName + " " + newEmployee.EmployeeStatus + " "
+                    +newEmployee.Shift + " "
+                    +newEmployee.Position + " "
+                    +newEmployee.Username + " "
+                    + newEmployee.Password + " ");
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -95,6 +129,15 @@ namespace ProjectHotpot
         public bool getAddStatus()
         {
             return addStatus;
+        }
+        public bool getUpdateStatus()
+        {
+            return updateStatus;
+        }
+
+        private void txtUsername_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

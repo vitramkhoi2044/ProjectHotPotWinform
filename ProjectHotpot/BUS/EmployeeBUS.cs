@@ -45,6 +45,24 @@ namespace ProjectHotpot.BUS
             return result;
         }
 
+        public Employee GetDetails(int ID)
+        {
+            Employee employee = new EmployeeDAO().SelectByID(ID);
+            return employee;
+        }
+
+        public bool UpdateEmployee(Employee newEmployee)
+        {
+            bool result = new EmployeeDAO().Update(newEmployee);
+            return result;
+        }
+
+        public bool DeleteEmployee(int EmployeeID)
+        {
+            bool result = new EmployeeDAO().Delete(EmployeeID);
+            return result;
+        }
+
         public static string Encrypt(string text)
         {
             using (var md5 = new MD5CryptoServiceProvider())

@@ -143,5 +143,26 @@ namespace ProjectHotpot
             }
             return true;
         }
+        public static bool ExecuteDeleteQuery(String _query, SqlParameter[] sqlParameter)
+        {
+            SqlCommand myCommand = new SqlCommand();
+            try
+            {
+                myCommand.Connection = OpenConnection();
+                myCommand.CommandText = _query;
+                myCommand.Parameters.AddRange(sqlParameter);
+                myAdapter.DeleteCommand = myCommand;
+                myCommand.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                Console.Write("Error - Connection.executeUpdateQuery - Query: " + _query + " \nException: " + e.StackTrace.ToString());
+                return false;
+            }
+            finally
+            {
+            }
+            return true;
+        }
     }
 }

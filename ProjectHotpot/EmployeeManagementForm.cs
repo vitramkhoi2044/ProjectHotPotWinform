@@ -1,4 +1,6 @@
-﻿using ProjectHotpot.DTO;
+﻿using Bunifu.UI.WinForms.Helpers.Transitions;
+using ProjectHotpot.BUS;
+using ProjectHotpot.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,11 +43,30 @@ namespace ProjectHotpot
         {
             if (e.ColumnIndex == 6) //edit
             {
-                new AddEditForm((Employee)dgvEmployee.CurrentRow.Tag).ShowDialog();
+                int ID = int.Parse(dgvEmployee.CurrentRow.Cells[0].Value.ToString());
+                AddEditForm addEditForm = new AddEditForm(ID);
+                addEditForm.ShowDialog();
+                if (addEditForm.getUpdateStatus())
+                {
+                    loadListEmployee();
+                }
             }
             else if (e.ColumnIndex == 7) //Delete
             {
-
+                DialogResult dialogResult = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    int ID = int.Parse(dgvEmployee.CurrentRow.Cells[0].Value.ToString());
+                    bool result = new EmployeeBUS().DeleteEmployee(ID);
+                    if (result)
+                    {
+                        loadListEmployee();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sorry Delete Motorcycles Fail!!!");
+                    }
+                }
             }
         }
 
@@ -57,8 +78,6 @@ namespace ProjectHotpot
             {
                 loadListEmployee();
             }
-
-
         }
         public void loadListEmployee()
         {
@@ -78,6 +97,11 @@ namespace ProjectHotpot
                     "Delete"
                 });
             }
+        }
+
+        private void dgvEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
