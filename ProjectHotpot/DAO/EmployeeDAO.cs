@@ -25,18 +25,22 @@ namespace ProjectHotpot.DAO
             string query = "Select * From Employees";
             DataTable dataTable = SqlDataAccessHelper.ExecuteSelectAllQuery(query);
             List<Employee> employees = new List<Employee>();
-            foreach (DataRow row in dataTable.Rows)
+            if(dataTable != null)
             {
-                Employee employee = new Employee();
-                employee.EmployeeID = int.Parse(row["EmployeeID"].ToString());
-                employee.EmployeeName = row["EmployeeName"].ToString();
-                employee.Shift = row["Shift"].ToString();
-                employee.EmployeeStatus = row["EmployeeStatus"].ToString();
-                employee.Position = row["Position"].ToString();
-                employee.Username = row["Username"].ToString();
-                employees.Add(employee);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    Employee employee = new Employee();
+                    employee.EmployeeID = int.Parse(row["EmployeeID"].ToString());
+                    employee.EmployeeName = row["EmployeeName"].ToString();
+                    employee.Shift = row["Shift"].ToString();
+                    employee.EmployeeStatus = row["EmployeeStatus"].ToString();
+                    employee.Position = row["Position"].ToString();
+                    employee.Username = row["Username"].ToString();
+                    employees.Add(employee);
+                }
+                return employees;
             }
-            return employees;
+            return null;
         }
 
         public Employee SelectByUsername(String userName)
@@ -91,15 +95,13 @@ namespace ProjectHotpot.DAO
         }
         public bool Update(Employee newEmployee)
         {
-            string query = "Update Employees Set EmployeeName=@EmployeeName,Shift=@Shift,EmployeeStatus=@EmployeeStatus,Position=@Position,Username=@Username,Password=@Password, where EmployeeID=@EmployeeID";
-            SqlParameter[] sqlParameters = new SqlParameter[7];
+            string query = "UPDATE Employees SET EmployeeName = @EmployeeName, Shift = @Shift, EmployeeStatus = @EmployeeStatus, Position = @Position WHERE EmployeeID = @EmployeeID";
+            SqlParameter[] sqlParameters = new SqlParameter[5];
             sqlParameters[0] = new SqlParameter("@EmployeeName", newEmployee.EmployeeName);
             sqlParameters[1] = new SqlParameter("@Shift", newEmployee.Shift);
             sqlParameters[2] = new SqlParameter("@EmployeeStatus", newEmployee.EmployeeStatus);
             sqlParameters[3] = new SqlParameter("@Position", newEmployee.Position);
-            sqlParameters[4] = new SqlParameter("@Username", newEmployee.Username);
-            sqlParameters[5] = new SqlParameter("@Password", newEmployee.Password);
-            sqlParameters[6] = new SqlParameter("@EmployeeID", newEmployee.EmployeeID);
+            sqlParameters[4] = new SqlParameter("@EmployeeID", newEmployee.EmployeeID);
             bool result = SqlDataAccessHelper.ExecuteUpdateQuery(query, sqlParameters);
             return result;
         }

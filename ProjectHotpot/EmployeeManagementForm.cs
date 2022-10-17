@@ -22,11 +22,13 @@ namespace ProjectHotpot
         private void EmployeeManagementForm_Load(object sender, EventArgs e)
         {
             List<Employee> emps = new BUS.EmployeeBUS().GetAll();
-            dgvEmployee.Rows.Clear();
-            foreach(var emp in emps)
+            if(emps != null)
             {
-                dgvEmployee.Rows.Add(new object[]
+                dgvEmployee.Rows.Clear();
+                foreach (var emp in emps)
                 {
+                    dgvEmployee.Rows.Add(new object[]
+                    {
                     emp.EmployeeID,
                     emp.EmployeeName,
                     emp.Shift,
@@ -35,7 +37,12 @@ namespace ProjectHotpot
                     emp.Username,
                     "Edit",
                     "Delete"
-                });
+                    });
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cannot Load Data!!!");
             }
         }
        
@@ -82,11 +89,13 @@ namespace ProjectHotpot
         public void loadListEmployee()
         {
             List<Employee> emps = new BUS.EmployeeBUS().GetAll();
-            dgvEmployee.Rows.Clear();
-            foreach (var emp in emps)
+            if (emps != null)
             {
-                dgvEmployee.Rows.Add(new object[]
+                dgvEmployee.Rows.Clear();
+                foreach (var emp in emps)
                 {
+                    dgvEmployee.Rows.Add(new object[]
+                    {
                     emp.EmployeeID,
                     emp.EmployeeName,
                     emp.Shift,
@@ -95,7 +104,12 @@ namespace ProjectHotpot
                     emp.Username,
                     "Edit",
                     "Delete"
-                });
+                    });
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cannot Load Data!!!");
             }
         }
 

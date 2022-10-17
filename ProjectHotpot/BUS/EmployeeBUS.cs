@@ -18,7 +18,11 @@ namespace ProjectHotpot.BUS
         public List<Employee> GetAll()
         {
             List<Employee> employees = new EmployeeDAO().SelectAll();
-            return employees;
+            if(employees != null)
+            {
+                return employees;
+            }
+            return null;
         }
         public bool Login(String userName, String password)
         {
@@ -63,6 +67,7 @@ namespace ProjectHotpot.BUS
             return result;
         }
 
+        //Helper
         public static string Encrypt(string text)
         {
             using (var md5 = new MD5CryptoServiceProvider())

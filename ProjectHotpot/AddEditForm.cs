@@ -81,8 +81,6 @@ namespace ProjectHotpot
                 Shift = cbShift.Text.ToString().Trim(),
                 EmployeeStatus = cbStatus.Text.ToString().Trim(),
                 Position = cbPosition.Text.ToString().Trim(),
-                Username = this.employee.Username,
-                Password = this.employee.Password,
             };
             bool result = new EmployeeBUS().UpdateEmployee(newEmployee);
             if (result)
@@ -93,12 +91,7 @@ namespace ProjectHotpot
             }
             else
             {
-                MessageBox.Show("Sorry update employee fail!!!"
-                    +newEmployee.EmployeeID+" "+newEmployee.EmployeeName + " " + newEmployee.EmployeeStatus + " "
-                    +newEmployee.Shift + " "
-                    +newEmployee.Position + " "
-                    +newEmployee.Username + " "
-                    + newEmployee.Password + " ");
+                MessageBox.Show("Sorry update employee fail!!!");
             }
         }
 
