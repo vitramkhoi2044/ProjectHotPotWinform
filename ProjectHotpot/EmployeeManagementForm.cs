@@ -51,9 +51,9 @@ namespace ProjectHotpot
             if (e.ColumnIndex == 6) //edit
             {
                 int ID = int.Parse(dgvEmployee.CurrentRow.Cells[0].Value.ToString());
-                AddEditForm addEditForm = new AddEditForm(ID);
-                addEditForm.ShowDialog();
-                if (addEditForm.getUpdateStatus())
+                EmployeeAddEditForm employeeAddEditForm = new EmployeeAddEditForm(ID);
+                employeeAddEditForm.ShowDialog();
+                if (employeeAddEditForm.getUpdateStatus())
                 {
                     loadListEmployee();
                 }
@@ -79,9 +79,9 @@ namespace ProjectHotpot
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddEditForm addEditForm =  new AddEditForm();
-            addEditForm.ShowDialog();
-            if (addEditForm.getAddStatus())
+            EmployeeAddEditForm employeeAddEditForm =  new EmployeeAddEditForm();
+            employeeAddEditForm.ShowDialog();
+            if (employeeAddEditForm.getAddStatus())
             {
                 loadListEmployee();
             }
