@@ -88,18 +88,28 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Brown;
             this.groupBox1.Controls.Add(this.tvCategory);
-            this.groupBox1.Location = new System.Drawing.Point(-1, 99);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Location = new System.Drawing.Point(-1, 90);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(216, 350);
+            this.groupBox1.Size = new System.Drawing.Size(216, 359);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh mục";
             // 
             // tvCategory
             // 
-            this.tvCategory.Location = new System.Drawing.Point(0, 0);
+            this.tvCategory.BackColor = System.Drawing.Color.Brown;
+            this.tvCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tvCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tvCategory.ForeColor = System.Drawing.SystemColors.Window;
+            this.tvCategory.ItemHeight = 30;
+            this.tvCategory.Location = new System.Drawing.Point(3, 16);
             this.tvCategory.Name = "tvCategory";
-            this.tvCategory.Size = new System.Drawing.Size(216, 350);
+            this.tvCategory.Size = new System.Drawing.Size(210, 340);
             this.tvCategory.TabIndex = 0;
             this.tvCategory.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvCategory_AfterSelect);
             // 

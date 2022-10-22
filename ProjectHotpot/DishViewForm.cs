@@ -25,6 +25,7 @@ namespace ProjectHotpot
 
         private void DishViewForm_Load(object sender, EventArgs e)
         {
+            tvCategory.ShowLines = false;
             LoadTreeView();
             //Button addButton = new Button();
             //addButton.Text = "Add";
