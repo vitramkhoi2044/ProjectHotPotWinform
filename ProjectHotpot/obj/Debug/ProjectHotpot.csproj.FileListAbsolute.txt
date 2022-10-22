@@ -134,7 +134,6 @@ C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotP
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\bin\Debug\System.Threading.AccessControl.xml
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.AssemblyReference.cache
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.SuggestedBindingRedirects.cache
-C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.AddEditForm.resources
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeManagementForm.resources
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.LoginForm.resources
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.Properties.Resources.resources
@@ -196,3 +195,7 @@ D:\Winform\ProjectHotpot\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHot
 D:\Winform\ProjectHotpot\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishManagementForm.resources
 D:\Winform\ProjectHotpot\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeAddEditForm.resources
 D:\Winform\ProjectHotpot\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishAddEditForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishAddEditForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishManagementForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeAddEditForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishViewForm.resources

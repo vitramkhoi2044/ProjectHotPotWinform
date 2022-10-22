@@ -71,7 +71,7 @@ namespace ProjectHotpot
                     }
                     else
                     {
-                        MessageBox.Show("Sorry Delete Motorcycles Fail!!!");
+                        MessageBox.Show("Sorry Delete Employees Fail!!!");
                     }
                 }
             }
