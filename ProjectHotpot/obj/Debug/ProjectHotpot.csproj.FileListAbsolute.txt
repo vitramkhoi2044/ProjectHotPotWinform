@@ -56,7 +56,6 @@ E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\bin\Debug\System.Threading.A
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.Fody.CopyLocal.cache
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.CopyComplete
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.Resources.CustomTextBox.resources
-E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.AddEditForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeManagementForm.resources
 D:\Winform\ProjectHotpot\ProjectHotpot\bin\Debug\Bunifu.UI.WinForms.xml
 D:\Winform\ProjectHotpot\ProjectHotpot\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
@@ -199,3 +198,7 @@ C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotP
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishManagementForm.resources
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeAddEditForm.resources
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishViewForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishAddEditForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishManagementForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeAddEditForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishViewForm.resources

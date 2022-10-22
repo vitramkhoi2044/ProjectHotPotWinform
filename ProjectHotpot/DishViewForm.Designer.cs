@@ -34,8 +34,10 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tvCategory = new System.Windows.Forms.TreeView();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listViewDish
@@ -44,9 +46,9 @@
             this.listViewDish.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listViewDish.HideSelection = false;
             this.listViewDish.LargeImageList = this.imageList1;
-            this.listViewDish.Location = new System.Drawing.Point(212, 113);
+            this.listViewDish.Location = new System.Drawing.Point(212, 99);
             this.listViewDish.Name = "listViewDish";
-            this.listViewDish.Size = new System.Drawing.Size(588, 336);
+            this.listViewDish.Size = new System.Drawing.Size(588, 350);
             this.listViewDish.SmallImageList = this.imageList1;
             this.listViewDish.TabIndex = 0;
             this.listViewDish.UseCompatibleStateImageBehavior = false;
@@ -84,21 +86,29 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Menu";
             // 
-            // label2
+            // groupBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 146);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tree view";
+            this.groupBox1.Controls.Add(this.tvCategory);
+            this.groupBox1.Location = new System.Drawing.Point(-1, 99);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(216, 350);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            // 
+            // tvCategory
+            // 
+            this.tvCategory.Location = new System.Drawing.Point(0, 0);
+            this.tvCategory.Name = "tvCategory";
+            this.tvCategory.Size = new System.Drawing.Size(216, 350);
+            this.tvCategory.TabIndex = 0;
+            this.tvCategory.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvCategory_AfterSelect);
             // 
             // DishViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listViewDish);
             this.Name = "DishViewForm";
@@ -106,8 +116,8 @@
             this.Load += new System.EventHandler(this.DishViewForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -117,6 +127,7 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TreeView tvCategory;
     }
 }

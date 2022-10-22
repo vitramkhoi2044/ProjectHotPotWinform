@@ -25,6 +25,7 @@ namespace ProjectHotpot
 
         private void DishViewForm_Load(object sender, EventArgs e)
         {
+            LoadTreeView();
             //Button addButton = new Button();
             //addButton.Text = "Add";
             //addButton.Location = new Point(70, 70);
@@ -57,12 +58,46 @@ namespace ProjectHotpot
             }
         }
 
+        public void LoadTreeView()
+        {
+            List<DishCategory> cates = new DishCategoryBUS().GetAll();
+            foreach(var cate in cates)
+            {
+                TreeNode treeNode = new TreeNode(cate.CategoryName);
+                treeNode.Tag = cate.CategoryID;
+                tvCategory.Nodes.Add(treeNode);
+            }
+        }
+
         private void listViewDish_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listViewDish.SelectedItems.Count > 0)
             {
                 ListViewItem item = listViewDish.SelectedItems[0];
                 MessageBox.Show("Thêm món "+item.Text+" thành công");
+            }
+        }
+
+        private void tvCategory_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            int cateID = (int)tvCategory.SelectedNode.Tag;
+            List<Dish> dishes = new DishBUS().GetAllDishesByCategoryID(cateID);
+       
+            listViewDish.Items.Clear();
+            if (dishes != null)
+            {
+                foreach (var dish in dishes)
+                {
+                    ListViewItem item = new ListViewItem(dish.DishName);
+                    item.ImageKey = dish.Image;
+                    item.SubItems.Add(dish.DishName);
+                    item.SubItems.Add(dish.DishPrice.ToString());
+                    listViewDish.Items.Add(item);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Món ăn chưa có ở danh mục này");
             }
         }
     }

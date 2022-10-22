@@ -1,4 +1,5 @@
-﻿using ProjectHotpot.DTO;
+﻿using ProjectHotpot.BUS;
+using ProjectHotpot.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -104,6 +105,30 @@ namespace ProjectHotpot.DAO
             sqlParameters[0] = new SqlParameter("@DishID", id);
             bool result = SqlDataAccessHelper.ExecuteDeleteQuery(query, sqlParameters);
             return result;
+        }
+
+        public List<Dish> SelectDishesFromCategoryID(int id)
+        {
+            string query = "Select * From Dishes Where CategoryID = @CategoryID";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@CategoryID", id);
+            DataTable dataTable = SqlDataAccessHelper.ExecuteSelectQuery(query, sqlParameters);
+            List<Dish> dishes = new List<Dish>();
+            if (dataTable.Rows.Count > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    Dish dish = new Dish();
+                    dish.DishID = int.Parse(row["DishID"].ToString());
+                    dish.DishName = row["DishName"].ToString();
+                    dish.DishPrice = int.Parse(row["DishPrice"].ToString());
+                    dish.Image = row["Image"].ToString();
+                    dish.CategoryID = int.Parse(row["CategoryID"].ToString());
+                    dishes.Add(dish);
+                }
+                return dishes;
+            }
+            return null;
         }
     }
 }

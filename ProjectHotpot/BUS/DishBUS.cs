@@ -54,5 +54,15 @@ namespace ProjectHotpot.BUS
             bool result = new DishDAO().Delete(id);
             return result;
         }
+
+        public List<Dish> GetAllDishesByCategoryID(int id)
+        {
+            List<Dish> dishes = new DishDAO().SelectDishesFromCategoryID(id);
+            if (dishes != null)
+            {
+                return dishes;
+            }
+            return null;
+        }
     }
 }
