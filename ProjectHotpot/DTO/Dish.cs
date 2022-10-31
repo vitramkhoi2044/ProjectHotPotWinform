@@ -11,7 +11,7 @@ namespace ProjectHotpot.DTO
         public int DishID { get; set; }
         public string DishName { get; set; }
         public int DishPrice { get; set; }
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
         public int CategoryID { get; set; }
     }
 }

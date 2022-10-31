@@ -40,7 +40,7 @@ namespace ProjectHotpot
             this.dish = new DishBUS().GetDishDetail(ID);
             txtName.Text = this.dish.DishName;
             txtPrice.Text = this.dish.DishPrice.ToString();
-            txtImage.Text = this.dish.Image.ToString();
+            pbImageDish.Image = HelperMethod.ConvertBinaryToImage((byte[])this.dish.Image);
             cbCategory.Text = new DishCategoryBUS().GetCategoryByID(this.dish.CategoryID).CategoryName;
         }
 
@@ -50,7 +50,7 @@ namespace ProjectHotpot
             {
                 DishName = txtName.Text.ToString().Trim(),
                 DishPrice = int.Parse(txtPrice.Text.ToString().Trim()),
-                Image = txtImage.Text.ToString().Trim()
+                Image = HelperMethod.ConvertImageToBinary(pbImageDish.Image)
             };
             string categoryName = cbCategory.Text.ToString().Trim();
             bool result = new DishBUS().AddNewDish(newDish,categoryName);
@@ -77,7 +77,7 @@ namespace ProjectHotpot
                 DishID = this.dish.DishID,
                 DishName = txtName.Text.ToString().Trim(),
                 DishPrice = int.Parse(txtPrice.Text.ToString().Trim()),
-                Image = txtImage.Text.ToString().Trim()
+                Image = HelperMethod.ConvertImageToBinary(pbImageDish.Image)
             };
             string categoryName = cbCategory.Text.ToString().Trim();
             bool result = new DishBUS().UpdateDish(newDish,categoryName);
@@ -110,6 +110,22 @@ namespace ProjectHotpot
                     cbCategory.Items.Add(dishCategory.CategoryName);
                 }
 
+            }
+        }
+        string fileName;
+        private void btnChooseAPicture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "JPEG|*.jpg";
+            openFileDialog.ValidateNames = true;
+            openFileDialog.Multiselect = false;
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = openFileDialog.FileName;
+                    pbImageDish.Image = Image.FromFile(fileName);
+                    pbImageDish.Refresh();
+                }
             }
         }
     }

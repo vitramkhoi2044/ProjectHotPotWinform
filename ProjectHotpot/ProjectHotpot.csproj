@@ -260,6 +260,7 @@
     <Compile Include="DishViewForm.Designer.cs">
       <DependentUpon>DishViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperMethod.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

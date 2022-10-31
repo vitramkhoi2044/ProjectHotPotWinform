@@ -31,6 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbImageDish = new System.Windows.Forms.PictureBox();
+            this.btnChooseAPicture = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -40,10 +43,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtImage = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageDish)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +75,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtImage);
+            this.panel2.Controls.Add(this.pbImageDish);
+            this.panel2.Controls.Add(this.btnChooseAPicture);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.btnAdd);
@@ -90,6 +93,40 @@
             this.panel2.Size = new System.Drawing.Size(535, 357);
             this.panel2.TabIndex = 2;
             // 
+            // pbImageDish
+            // 
+            this.pbImageDish.Location = new System.Drawing.Point(264, 138);
+            this.pbImageDish.Name = "pbImageDish";
+            this.pbImageDish.Size = new System.Drawing.Size(248, 131);
+            this.pbImageDish.TabIndex = 17;
+            this.pbImageDish.TabStop = false;
+            // 
+            // btnChooseAPicture
+            // 
+            this.btnChooseAPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(201)))), ((int)(((byte)(14)))));
+            this.btnChooseAPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseAPicture.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChooseAPicture.ForeColor = System.Drawing.Color.White;
+            this.btnChooseAPicture.Location = new System.Drawing.Point(101, 139);
+            this.btnChooseAPicture.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChooseAPicture.Name = "btnChooseAPicture";
+            this.btnChooseAPicture.Size = new System.Drawing.Size(156, 40);
+            this.btnChooseAPicture.TabIndex = 16;
+            this.btnChooseAPicture.Text = "Choose a picture";
+            this.btnChooseAPicture.UseVisualStyleBackColor = false;
+            this.btnChooseAPicture.Click += new System.EventHandler(this.btnChooseAPicture_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 142);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Image";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(101, 77);
@@ -104,7 +141,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(156, 201);
+            this.btnAdd.Location = new System.Drawing.Point(156, 303);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(121, 43);
@@ -119,7 +156,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(285, 201);
+            this.btnCancel.Location = new System.Drawing.Point(285, 303);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(121, 43);
@@ -134,7 +171,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(156, 201);
+            this.btnUpdate.Location = new System.Drawing.Point(156, 303);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(121, 43);
@@ -157,7 +194,7 @@
             // cbCategory
             // 
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(101, 137);
+            this.cbCategory.Location = new System.Drawing.Point(101, 107);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(411, 24);
@@ -166,7 +203,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 145);
+            this.label5.Location = new System.Drawing.Point(17, 115);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 16);
@@ -191,25 +228,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
-            // txtImage
-            // 
-            this.txtImage.Location = new System.Drawing.Point(101, 107);
-            this.txtImage.Margin = new System.Windows.Forms.Padding(4);
-            this.txtImage.Name = "txtImage";
-            this.txtImage.Size = new System.Drawing.Size(411, 22);
-            this.txtImage.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 110);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Image";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // DishAddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,6 +243,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageDish)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,7 +262,8 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtImage;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pbImageDish;
+        private System.Windows.Forms.Button btnChooseAPicture;
     }
 }

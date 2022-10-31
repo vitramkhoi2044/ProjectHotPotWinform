@@ -1,12 +1,15 @@
 ﻿using ProjectHotpot.BUS;
 using ProjectHotpot.DTO;
+using RestSharp.Extensions;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectHotpot.DAO
 {
@@ -29,7 +32,7 @@ namespace ProjectHotpot.DAO
                     dish.DishID = int.Parse(row["DishID"].ToString());
                     dish.DishName = row["DishName"].ToString();
                     dish.DishPrice = int.Parse(row["DishPrice"].ToString());
-                    dish.Image = row["Image"].ToString();
+                    dish.Image = (byte[])(row["Image"]);
                     dish.CategoryID = int.Parse(row["CategoryID"].ToString());
                     dishes.Add(dish);
                 }
@@ -50,7 +53,7 @@ namespace ProjectHotpot.DAO
                 dish.DishID = int.Parse(row["DishID"].ToString());
                 dish.DishName = row["DishName"].ToString();
                 dish.DishPrice = int.Parse(row["DishPrice"].ToString());
-                dish.Image = row["Image"].ToString();
+                dish.Image = (byte[])(row["Image"]);
                 dish.CategoryID = int.Parse(row["CategoryID"].ToString());
                 return dish;
             }
@@ -69,7 +72,7 @@ namespace ProjectHotpot.DAO
                 dish.DishID = int.Parse(row["DishID"].ToString());
                 dish.DishName = row["DishName"].ToString();
                 dish.DishPrice = int.Parse(row["DishPrice"].ToString());
-                dish.Image = row["Image"].ToString();
+                dish.Image = (byte[])(row["Image"]);
                 dish.CategoryID = int.Parse(row["CategoryID"].ToString());
                 return dish;
             }
@@ -122,7 +125,7 @@ namespace ProjectHotpot.DAO
                     dish.DishID = int.Parse(row["DishID"].ToString());
                     dish.DishName = row["DishName"].ToString();
                     dish.DishPrice = int.Parse(row["DishPrice"].ToString());
-                    dish.Image = row["Image"].ToString();
+                    dish.Image = (byte[])(row["Image"]);
                     dish.CategoryID = int.Parse(row["CategoryID"].ToString());
                     dishes.Add(dish);
                 }

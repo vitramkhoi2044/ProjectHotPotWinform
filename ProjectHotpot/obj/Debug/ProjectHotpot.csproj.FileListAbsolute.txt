@@ -202,3 +202,4 @@ E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.Dish
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishManagementForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeAddEditForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishViewForm.resources
+D:\Winform\ProjectHotpot\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishViewForm.resources

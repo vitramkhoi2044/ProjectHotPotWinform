@@ -47,7 +47,9 @@ namespace ProjectHotpot
                 foreach (var dish in dishes)
                 {
                     ListViewItem item = new ListViewItem(dish.DishName);
-                    item.ImageKey = dish.Image;
+                    imageList1.Images.Add(dish.DishID.ToString(), HelperMethod.ConvertBinaryToImage(dish.Image));
+                    //imageList1.ImageSize = new Size(68,68);
+                    item.ImageKey = dish.DishID.ToString();
                     item.SubItems.Add(dish.DishName);
                     item.SubItems.Add(dish.DishPrice.ToString());
                     listViewDish.Items.Add(item);
@@ -83,14 +85,15 @@ namespace ProjectHotpot
         {
             int cateID = (int)tvCategory.SelectedNode.Tag;
             List<Dish> dishes = new DishBUS().GetAllDishesByCategoryID(cateID);
-       
+            
             listViewDish.Items.Clear();
             if (dishes != null)
             {
                 foreach (var dish in dishes)
                 {
                     ListViewItem item = new ListViewItem(dish.DishName);
-                    item.ImageKey = dish.Image;
+                    imageList1.Images.Add(dish.DishID.ToString(), HelperMethod.ConvertBinaryToImage(dish.Image));
+                    item.ImageKey = dish.DishID.ToString();
                     item.SubItems.Add(dish.DishName);
                     item.SubItems.Add(dish.DishPrice.ToString());
                     listViewDish.Items.Add(item);
@@ -100,6 +103,18 @@ namespace ProjectHotpot
             {
                 MessageBox.Show("Món ăn chưa có ở danh mục này");
             }
+        }
+        private ImageList setListImage()
+        {
+            ImageList list = new ImageList();
+
+            List<Dish> dishes = new DishBUS().GetAll();
+
+            foreach (var dish in dishes)
+            {
+                list.Images.Add(HelperMethod.ConvertBinaryToImage(dish.Image));
+            }
+            return list;
         }
     }
 }
