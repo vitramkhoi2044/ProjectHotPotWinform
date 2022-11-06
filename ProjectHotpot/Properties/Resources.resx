@@ -118,32 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="4f87133720e01558a8ed1ac0057b221c2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4f87133720e01558a8ed1ac0057b221c2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image_2022-10-13_191652257-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_191652257-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4f87133720e01558a8ed1ac0057b221c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4f87133720e01558a8ed1ac0057b221c1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4f87133720e01558a8ed1ac0057b221c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4f87133720e01558a8ed1ac0057b221c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Screenshot 2022-10-13 190448" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot 2022-10-13 190448.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Screenshot 2022-10-13 190129" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot 2022-10-13 190129.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_184538912" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_184538912.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image_2022-10-13_184136492-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_184136492-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image_2022-10-13_191129356-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_2022-10-13_191129356-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image_2022-10-13_191346207" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_191346207.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_2022-10-13_184136492-removebg-preview-modified-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_184136492-removebg-preview-modified-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2022-10-13 190129" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2022-10-13 190129.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_2022-10-13_190930371-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_190930371-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_2022-10-13_191129356-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_191129356-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_2022-10-13_184136492-removebg-preview-modified" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_184136492-removebg-preview-modified.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_2022-10-13_184625835-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_184625835-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4f87133720e01558a8ed1ac0057b221c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4f87133720e01558a8ed1ac0057b221c1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,52 +157,49 @@
   <data name="image_2022-10-13_183346199-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_2022-10-13_183346199-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_2022-10-13_184625835-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_184625835-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4f87133720e01558a8ed1ac0057b221c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4f87133720e01558a8ed1ac0057b221c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cropped-shot-delicious-shabu-hot-pot-black-background-japanese-hotpot-style-164605556" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cropped-shot-delicious-shabu-hot-pot-black-background-japanese-hotpot-style-164605556.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image_2022-10-13_184538912" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_184538912.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_2022-10-13_184136492-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_184136492-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_191129356" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_191129356.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_191346207" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_191346207.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_184625835-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_184625835-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_183048406-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_183048406-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_190930371-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_190930371-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_191530375-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_191530375-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_191129356-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_191129356-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Screenshot 2022-10-13 190858" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2022-10-13 190858.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="image_2022-10-13_191129356" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_191129356.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_2022-10-13_184625835-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_184625835-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2022-10-13 190448" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2022-10-13 190448.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cropped-shot-delicious-shabu-hot-pot-black-background-japanese-hotpot-style-164605556" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cropped-shot-delicious-shabu-hot-pot-black-background-japanese-hotpot-style-164605556.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_2022-10-13_183048406-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_183048406-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_2022-10-13_191530375-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-10-13_191530375-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4f87133720e01558a8ed1ac0057b221c2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4f87133720e01558a8ed1ac0057b221c2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="image_2022-10-13_200822252" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_2022-10-13_200822252.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_2022-10-13_184136492-removebg-preview-modified-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_184136492-removebg-preview-modified-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_184136492-removebg-preview-modified" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_184136492-removebg-preview-modified.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_2022-10-13_191652257-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_2022-10-13_191652257-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="image_2022-10-13_223421742" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_2022-10-13_223421742.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_2022-11-06_094757112-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_2022-11-06_094757112-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
