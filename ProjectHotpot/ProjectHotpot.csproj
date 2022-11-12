@@ -79,6 +79,7 @@
       <HintPath>..\packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
@@ -250,6 +251,7 @@
     </Compile>
     <Compile Include="DTO\Dish.cs" />
     <Compile Include="DTO\DishCategory.cs" />
+    <Compile Include="DTO\DTOValidator.cs" />
     <Compile Include="DTO\Employee.cs" />
     <Compile Include="EmployeeAddEditForm.cs">
       <SubType>Form</SubType>
@@ -321,6 +323,8 @@
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ProjectHotpot.DTO.Dish.datasource" />
+    <None Include="Properties\DataSources\ProjectHotpot.DTO.Employee.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

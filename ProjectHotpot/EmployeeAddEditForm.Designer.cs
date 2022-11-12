@@ -28,24 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label employeeNameLabel;
+            System.Windows.Forms.Label shiftLabel;
+            System.Windows.Forms.Label employeeStatusLabel;
+            System.Windows.Forms.Label positionLabel;
+            System.Windows.Forms.Label usernameLabel;
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.labelUserName = new System.Windows.Forms.Label();
-            this.cbPosition = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbStatus = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbShift = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.employeeNameTextBox = new System.Windows.Forms.TextBox();
+            this.shiftComboBox = new System.Windows.Forms.ComboBox();
+            this.employeeStatusComboBox = new System.Windows.Forms.ComboBox();
+            this.positionComboBox = new System.Windows.Forms.ComboBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            employeeNameLabel = new System.Windows.Forms.Label();
+            shiftLabel = new System.Windows.Forms.Label();
+            employeeStatusLabel = new System.Windows.Forms.Label();
+            positionLabel = new System.Windows.Forms.Label();
+            usernameLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,33 +86,24 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtUsername);
+            this.panel2.Controls.Add(usernameLabel);
+            this.panel2.Controls.Add(this.usernameTextBox);
+            this.panel2.Controls.Add(positionLabel);
+            this.panel2.Controls.Add(this.positionComboBox);
+            this.panel2.Controls.Add(employeeStatusLabel);
+            this.panel2.Controls.Add(this.employeeStatusComboBox);
+            this.panel2.Controls.Add(shiftLabel);
+            this.panel2.Controls.Add(this.shiftComboBox);
+            this.panel2.Controls.Add(employeeNameLabel);
+            this.panel2.Controls.Add(this.employeeNameTextBox);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.labelUserName);
-            this.panel2.Controls.Add(this.cbPosition);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.cbStatus);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.cbShift);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtName);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(17, 146);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(535, 357);
             this.panel2.TabIndex = 2;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(101, 217);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(411, 22);
-            this.txtUsername.TabIndex = 14;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged_1);
             // 
             // btnAdd
             // 
@@ -149,111 +150,108 @@
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // labelUserName
+            // employeeNameLabel
             // 
-            this.labelUserName.AutoSize = true;
-            this.labelUserName.Location = new System.Drawing.Point(17, 220);
-            this.labelUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(70, 16);
-            this.labelUserName.TabIndex = 9;
-            this.labelUserName.Text = "Username";
-            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            employeeNameLabel.AutoSize = true;
+            employeeNameLabel.Location = new System.Drawing.Point(17, 50);
+            employeeNameLabel.Name = "employeeNameLabel";
+            employeeNameLabel.Size = new System.Drawing.Size(47, 16);
+            employeeNameLabel.TabIndex = 14;
+            employeeNameLabel.Text = "Name:";
             // 
-            // cbPosition
+            // employeeNameTextBox
             // 
-            this.cbPosition.FormattingEnabled = true;
-            this.cbPosition.Items.AddRange(new object[] {
-            "Quản lý",
-            "Nhân viên kho",
-            "Nhân viên tiếp tân"});
-            this.cbPosition.Location = new System.Drawing.Point(101, 177);
-            this.cbPosition.Margin = new System.Windows.Forms.Padding(4);
-            this.cbPosition.Name = "cbPosition";
-            this.cbPosition.Size = new System.Drawing.Size(160, 24);
-            this.cbPosition.TabIndex = 8;
+            this.employeeNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "EmployeeName", true));
+            this.employeeNameTextBox.Location = new System.Drawing.Point(101, 47);
+            this.employeeNameTextBox.Name = "employeeNameTextBox";
+            this.employeeNameTextBox.Size = new System.Drawing.Size(411, 22);
+            this.employeeNameTextBox.TabIndex = 15;
             // 
-            // label5
+            // shiftLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 181);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Position";
+            shiftLabel.AutoSize = true;
+            shiftLabel.Location = new System.Drawing.Point(17, 87);
+            shiftLabel.Name = "shiftLabel";
+            shiftLabel.Size = new System.Drawing.Size(35, 16);
+            shiftLabel.TabIndex = 15;
+            shiftLabel.Text = "Shift:";
             // 
-            // cbStatus
+            // shiftComboBox
             // 
-            this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Items.AddRange(new object[] {
-            "Free",
-            "Offline",
-            "Working"});
-            this.cbStatus.Location = new System.Drawing.Point(101, 129);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(160, 24);
-            this.cbStatus.TabIndex = 6;
+            this.shiftComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Shift", true));
+            this.shiftComboBox.FormattingEnabled = true;
+            this.shiftComboBox.Location = new System.Drawing.Point(101, 84);
+            this.shiftComboBox.Name = "shiftComboBox";
+            this.shiftComboBox.Size = new System.Drawing.Size(160, 24);
+            this.shiftComboBox.TabIndex = 16;
             // 
-            // label4
+            // employeeStatusLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 133);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Status";
+            employeeStatusLabel.AutoSize = true;
+            employeeStatusLabel.Location = new System.Drawing.Point(17, 132);
+            employeeStatusLabel.Name = "employeeStatusLabel";
+            employeeStatusLabel.Size = new System.Drawing.Size(47, 16);
+            employeeStatusLabel.TabIndex = 16;
+            employeeStatusLabel.Text = "Status:";
             // 
-            // cbShift
+            // employeeStatusComboBox
             // 
-            this.cbShift.FormattingEnabled = true;
-            this.cbShift.Items.AddRange(new object[] {
-            "9:00 - 14:30",
-            "14 - 18:30",
-            "18 - 22"});
-            this.cbShift.Location = new System.Drawing.Point(101, 84);
-            this.cbShift.Margin = new System.Windows.Forms.Padding(4);
-            this.cbShift.Name = "cbShift";
-            this.cbShift.Size = new System.Drawing.Size(160, 24);
-            this.cbShift.TabIndex = 4;
-            this.cbShift.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.employeeStatusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "EmployeeStatus", true));
+            this.employeeStatusComboBox.FormattingEnabled = true;
+            this.employeeStatusComboBox.Location = new System.Drawing.Point(101, 129);
+            this.employeeStatusComboBox.Name = "employeeStatusComboBox";
+            this.employeeStatusComboBox.Size = new System.Drawing.Size(160, 24);
+            this.employeeStatusComboBox.TabIndex = 17;
             // 
-            // label3
+            // positionLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 87);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Shift";
+            positionLabel.AutoSize = true;
+            positionLabel.Location = new System.Drawing.Point(17, 180);
+            positionLabel.Name = "positionLabel";
+            positionLabel.Size = new System.Drawing.Size(58, 16);
+            positionLabel.TabIndex = 17;
+            positionLabel.Text = "Position:";
             // 
-            // txtName
+            // positionComboBox
             // 
-            this.txtName.Location = new System.Drawing.Point(101, 47);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(411, 22);
-            this.txtName.TabIndex = 1;
+            this.positionComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Position", true));
+            this.positionComboBox.FormattingEnabled = true;
+            this.positionComboBox.Location = new System.Drawing.Point(101, 177);
+            this.positionComboBox.Name = "positionComboBox";
+            this.positionComboBox.Size = new System.Drawing.Size(160, 24);
+            this.positionComboBox.TabIndex = 18;
             // 
-            // label2
+            // usernameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 50);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            usernameLabel.AutoSize = true;
+            usernameLabel.Location = new System.Drawing.Point(17, 220);
+            usernameLabel.Name = "usernameLabel";
+            usernameLabel.Size = new System.Drawing.Size(73, 16);
+            usernameLabel.TabIndex = 18;
+            usernameLabel.Text = "Username:";
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Username", true));
+            this.usernameTextBox.Location = new System.Drawing.Point(101, 217);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(411, 22);
+            this.usernameTextBox.TabIndex = 19;
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.DataSource = this.employeeBindingSource;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(ProjectHotpot.DTO.Employee);
             // 
             // EmployeeAddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 555);
+            this.ClientSize = new System.Drawing.Size(572, 555);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -265,6 +263,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,18 +274,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox cbShift;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbStatus;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbPosition;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label labelUserName;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private System.Windows.Forms.ComboBox positionComboBox;
+        private System.Windows.Forms.ComboBox employeeStatusComboBox;
+        private System.Windows.Forms.ComboBox shiftComboBox;
+        private System.Windows.Forms.TextBox employeeNameTextBox;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

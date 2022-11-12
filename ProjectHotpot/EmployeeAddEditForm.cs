@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace ProjectHotpot
             btnAdd.Visible = true;
             btnUpdate.Visible = false;
             addStatus = false;
+            employeeBindingSource.DataSource = new Employee();
         }
 
         public EmployeeAddEditForm(int ID)
@@ -34,37 +36,38 @@ namespace ProjectHotpot
             lblTitle.Text = "Update nhân viên";
             btnAdd.Visible = false;
             btnUpdate.Visible = true;
-            labelUserName.Visible = false;
-            txtUsername.Visible = false;
+            usernameTextBox.Enabled = false;
             updateStatus = false;
             this.employee = new EmployeeBUS().GetDetails(ID);
-            txtName.Text = this.employee.EmployeeName;
-            cbShift.Text = this.employee.Shift;
-            cbStatus.Text= this.employee.EmployeeStatus;
-            cbPosition.Text=this.employee.Position;
+            employeeBindingSource.DataSource = employee;
 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Employee newEmployee = new Employee
+            employeeBindingSource.EndEdit();
+            Employee newEmployee = employeeBindingSource.Current as Employee;
+            if(newEmployee != null)
             {
-                EmployeeName = txtName.Text.ToString().Trim(),
-                Shift = cbShift.Text.ToString().Trim(),
-                EmployeeStatus = cbStatus.Text.ToString().Trim(),
-                Position = cbPosition.Text.ToString().Trim(),
-                Username = txtUsername.Text.ToString().Trim()
-            };
-            bool result = new EmployeeBUS().AddNewEmployee(newEmployee);
-            if (result)
-            {
-                MessageBox.Show("Add new employee sucessful!!!");
-                addStatus = true;
-                Close();
-            }
-            else
-            {
-                MessageBox.Show("Sorry add new employee fail!!!");
+                if (newEmployee.IsValid)
+                {
+                    bool result = new EmployeeBUS().AddNewEmployee(newEmployee);
+                    if (result)
+                    {
+                        MessageBox.Show(newEmployee.EmployeeName);
+                        MessageBox.Show("Add new employee sucessful!!!");
+                        addStatus = true;
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sorry add new employee fail!!!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng sửa lại các trường chưa hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
         private void btnCancel_Click(object sender, EventArgs e)
@@ -74,24 +77,27 @@ namespace ProjectHotpot
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Employee newEmployee = new Employee
+            
+            employeeBindingSource.EndEdit();
+            Employee newEmployee = employeeBindingSource.Current as Employee;
+            newEmployee.EmployeeID = this.employee.EmployeeID;
+            if (newEmployee.IsValid)
             {
-                EmployeeID = this.employee.EmployeeID,
-                EmployeeName = txtName.Text.ToString().Trim(),
-                Shift = cbShift.Text.ToString().Trim(),
-                EmployeeStatus = cbStatus.Text.ToString().Trim(),
-                Position = cbPosition.Text.ToString().Trim(),
-            };
-            bool result = new EmployeeBUS().UpdateEmployee(newEmployee);
-            if (result)
-            {
-                MessageBox.Show("Update employee sucessful!!!");
-                updateStatus = true;
-                Close();
+                bool result = new EmployeeBUS().UpdateEmployee(newEmployee);
+                if (result)
+                {
+                    MessageBox.Show("Update employee sucessful!!!");
+                    updateStatus = true;
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Sorry update employee fail!!!");
+                }
             }
             else
             {
-                MessageBox.Show("Sorry update employee fail!!!");
+                MessageBox.Show("Vui lòng sửa lại các trường chưa hợp lệ","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 

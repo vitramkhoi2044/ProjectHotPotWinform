@@ -8,7 +8,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using ProjectHotpot.BUS;
+using ProjectHotpot.DAO;
 using ProjectHotpot.DTO;
 using static Bunifu.UI.WinForms.BunifuSnackbar;
 
@@ -27,6 +29,7 @@ namespace ProjectHotpot
             btnUpdate.Visible = false;
             loadListCategoryName();
             addStatus = false;
+            dishBindingSource.DataSource = new Dish();
         }
 
         public DishAddEditForm(int ID)
@@ -38,31 +41,37 @@ namespace ProjectHotpot
             updateStatus = false;
             loadListCategoryName();
             this.dish = new DishBUS().GetDishDetail(ID);
-            txtName.Text = this.dish.DishName;
-            txtPrice.Text = this.dish.DishPrice.ToString();
+            dishBindingSource.DataSource = this.dish;
             pbImageDish.Image = HelperMethod.ConvertBinaryToImage((byte[])this.dish.Image);
             cbCategory.Text = new DishCategoryBUS().GetCategoryByID(this.dish.CategoryID).CategoryName;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Dish newDish = new Dish
-            {
-                DishName = txtName.Text.ToString().Trim(),
-                DishPrice = int.Parse(txtPrice.Text.ToString().Trim()),
-                Image = HelperMethod.ConvertImageToBinary(pbImageDish.Image)
-            };
+            dishBindingSource.EndEdit();
+            Dish newDish = dishBindingSource.Current as Dish;
+            newDish.Image = HelperMethod.ConvertImageToBinary(pbImageDish.Image);
             string categoryName = cbCategory.Text.ToString().Trim();
-            bool result = new DishBUS().AddNewDish(newDish,categoryName);
-            if (result)
+            if (newDish != null)
             {
-                MessageBox.Show("Add new dish sucessful!!!");
-                addStatus = true;
-                Close();
-            }
-            else
-            {
-                MessageBox.Show("Sorry add new dish fail!!!");
+                if (newDish.IsValid)
+                {
+                    bool result = new DishBUS().AddNewDish(newDish, categoryName);
+                    if (result)
+                    {
+                        MessageBox.Show("Add new dish sucessful!!!");
+                        addStatus = true;
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sorry add new dish fail!!!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng sửa lại các trường chưa hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
         private void btnCancel_Click(object sender, EventArgs e)
@@ -72,24 +81,28 @@ namespace ProjectHotpot
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Dish newDish = new Dish
-            {
-                DishID = this.dish.DishID,
-                DishName = txtName.Text.ToString().Trim(),
-                DishPrice = int.Parse(txtPrice.Text.ToString().Trim()),
-                Image = HelperMethod.ConvertImageToBinary(pbImageDish.Image)
-            };
+            dishBindingSource.EndEdit();
+            Dish newDish = dishBindingSource.Current as Dish;
+            newDish.DishID = this.dish.DishID;
+            newDish.Image = HelperMethod.ConvertImageToBinary(pbImageDish.Image);
             string categoryName = cbCategory.Text.ToString().Trim();
-            bool result = new DishBUS().UpdateDish(newDish,categoryName);
-            if (result)
+            if (newDish.IsValid)
             {
-                MessageBox.Show("Update dish sucessful!!!");
-                updateStatus = true;
-                Close();
+                bool result = new DishBUS().UpdateDish(newDish, categoryName);
+                if (result)
+                {
+                    MessageBox.Show("Update dish sucessful!!!");
+                    updateStatus = true;
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Sorry update dish fail!!!");
+                }
             }
             else
             {
-                MessageBox.Show("Sorry update dish fail!!!");
+                MessageBox.Show("Vui lòng sửa lại các trường chưa hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public bool getAddStatus()

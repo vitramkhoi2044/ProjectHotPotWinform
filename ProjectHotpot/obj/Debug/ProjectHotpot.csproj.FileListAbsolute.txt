@@ -256,3 +256,4 @@ E:\New folder\ProjectHotPotWinform\ProjectHotpot\bin\Debug\System.Text.Encoding.
 E:\New folder\ProjectHotPotWinform\ProjectHotpot\bin\Debug\System.Threading.AccessControl.xml
 E:\New folder\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.Fody.CopyLocal.cache
 E:\New folder\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.CopyComplete
+D:\Winform\ProjectHotpot\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.MainForm.resources

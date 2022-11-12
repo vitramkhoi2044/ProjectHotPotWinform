@@ -28,25 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label dishNameLabel1;
+            System.Windows.Forms.Label dishPriceLabel1;
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dishPriceTextBox1 = new System.Windows.Forms.TextBox();
+            this.dishBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dishNameTextBox1 = new System.Windows.Forms.TextBox();
             this.pbImageDish = new System.Windows.Forms.PictureBox();
             this.btnChooseAPicture = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.labelUserName = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            dishNameLabel1 = new System.Windows.Forms.Label();
+            dishPriceLabel1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dishBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageDish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dishNameLabel1
+            // 
+            dishNameLabel1.AutoSize = true;
+            dishNameLabel1.Location = new System.Drawing.Point(17, 50);
+            dishNameLabel1.Name = "dishNameLabel1";
+            dishNameLabel1.Size = new System.Drawing.Size(47, 16);
+            dishNameLabel1.TabIndex = 19;
+            dishNameLabel1.Text = "Name:";
+            // 
+            // dishPriceLabel1
+            // 
+            dishPriceLabel1.AutoSize = true;
+            dishPriceLabel1.Location = new System.Drawing.Point(17, 80);
+            dishPriceLabel1.Name = "dishPriceLabel1";
+            dishPriceLabel1.Size = new System.Drawing.Size(41, 16);
+            dishPriceLabel1.TabIndex = 20;
+            dishPriceLabel1.Text = "Price:";
             // 
             // panel1
             // 
@@ -75,29 +100,50 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(dishPriceLabel1);
+            this.panel2.Controls.Add(this.dishPriceTextBox1);
+            this.panel2.Controls.Add(dishNameLabel1);
+            this.panel2.Controls.Add(this.dishNameTextBox1);
             this.panel2.Controls.Add(this.pbImageDish);
             this.panel2.Controls.Add(this.btnChooseAPicture);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.labelUserName);
             this.panel2.Controls.Add(this.cbCategory);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtName);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(17, 146);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(535, 357);
+            this.panel2.Size = new System.Drawing.Size(535, 366);
             this.panel2.TabIndex = 2;
+            // 
+            // dishPriceTextBox1
+            // 
+            this.dishPriceTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dishBindingSource, "DishPrice", true));
+            this.dishPriceTextBox1.Location = new System.Drawing.Point(101, 77);
+            this.dishPriceTextBox1.Name = "dishPriceTextBox1";
+            this.dishPriceTextBox1.Size = new System.Drawing.Size(411, 22);
+            this.dishPriceTextBox1.TabIndex = 2;
+            // 
+            // dishBindingSource
+            // 
+            this.dishBindingSource.DataSource = typeof(ProjectHotpot.DTO.Dish);
+            // 
+            // dishNameTextBox1
+            // 
+            this.dishNameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dishBindingSource, "DishName", true));
+            this.dishNameTextBox1.Location = new System.Drawing.Point(101, 47);
+            this.dishNameTextBox1.Name = "dishNameTextBox1";
+            this.dishNameTextBox1.Size = new System.Drawing.Size(411, 22);
+            this.dishNameTextBox1.TabIndex = 1;
             // 
             // pbImageDish
             // 
             this.pbImageDish.Location = new System.Drawing.Point(264, 138);
             this.pbImageDish.Name = "pbImageDish";
             this.pbImageDish.Size = new System.Drawing.Size(248, 131);
+            this.pbImageDish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImageDish.TabIndex = 17;
             this.pbImageDish.TabStop = false;
             // 
@@ -111,7 +157,7 @@
             this.btnChooseAPicture.Margin = new System.Windows.Forms.Padding(4);
             this.btnChooseAPicture.Name = "btnChooseAPicture";
             this.btnChooseAPicture.Size = new System.Drawing.Size(156, 40);
-            this.btnChooseAPicture.TabIndex = 16;
+            this.btnChooseAPicture.TabIndex = 4;
             this.btnChooseAPicture.Text = "Choose a picture";
             this.btnChooseAPicture.UseVisualStyleBackColor = false;
             this.btnChooseAPicture.Click += new System.EventHandler(this.btnChooseAPicture_Click);
@@ -126,14 +172,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Image";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(101, 77);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(411, 22);
-            this.txtPrice.TabIndex = 14;
             // 
             // btnAdd
             // 
@@ -180,17 +218,6 @@
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // labelUserName
-            // 
-            this.labelUserName.AutoSize = true;
-            this.labelUserName.Location = new System.Drawing.Point(17, 80);
-            this.labelUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(38, 16);
-            this.labelUserName.TabIndex = 9;
-            this.labelUserName.Text = "Price";
-            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // cbCategory
             // 
             this.cbCategory.FormattingEnabled = true;
@@ -198,7 +225,7 @@
             this.cbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(411, 24);
-            this.cbCategory.TabIndex = 8;
+            this.cbCategory.TabIndex = 3;
             // 
             // label5
             // 
@@ -210,40 +237,29 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Category";
             // 
-            // txtName
+            // errorProvider
             // 
-            this.txtName.Location = new System.Drawing.Point(101, 47);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(411, 22);
-            this.txtName.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 50);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Name";
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.DataSource = this.dishBindingSource;
             // 
             // DishAddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 555);
+            this.ClientSize = new System.Drawing.Size(572, 555);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DishAddEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "EmployeeAddEditForm";
+            this.Text = "DishAddEditForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dishBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageDish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,17 +269,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label labelUserName;
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbImageDish;
         private System.Windows.Forms.Button btnChooseAPicture;
+        private System.Windows.Forms.BindingSource dishBindingSource;
+        private System.Windows.Forms.TextBox dishPriceTextBox1;
+        private System.Windows.Forms.TextBox dishNameTextBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
