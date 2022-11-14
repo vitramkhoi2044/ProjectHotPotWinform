@@ -41,12 +41,14 @@
             this.btnMaximized = new FontAwesome.Sharp.IconButton();
             this.btnMinimized = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.serviceController2 = new System.ServiceProcess.ServiceController();
             this.rjDropdownMenu1 = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýMónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnContent = new System.Windows.Forms.Panel();
             this.pnSidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,8 +66,9 @@
             this.pnSidebar.Controls.Add(this.panel1);
             this.pnSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnSidebar.Location = new System.Drawing.Point(0, 0);
+            this.pnSidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnSidebar.Name = "pnSidebar";
-            this.pnSidebar.Size = new System.Drawing.Size(185, 450);
+            this.pnSidebar.Size = new System.Drawing.Size(247, 554);
             this.pnSidebar.TabIndex = 0;
             this.pnSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -81,10 +84,11 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 179);
+            this.iconButton1.Location = new System.Drawing.Point(0, 221);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(185, 64);
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(247, 79);
             this.iconButton1.TabIndex = 2;
             this.iconButton1.Tag = "Quản lý";
             this.iconButton1.Text = "  iconButton2";
@@ -104,10 +108,11 @@
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton7.IconSize = 30;
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(0, 411);
+            this.iconButton7.Location = new System.Drawing.Point(0, 506);
+            this.iconButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton7.Size = new System.Drawing.Size(185, 39);
+            this.iconButton7.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.iconButton7.Size = new System.Drawing.Size(247, 48);
             this.iconButton7.TabIndex = 1;
             this.iconButton7.Tag = "Exit";
             this.iconButton7.Text = "  Sign out";
@@ -126,10 +131,11 @@
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.IconSize = 30;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 115);
+            this.iconButton6.Location = new System.Drawing.Point(0, 142);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton6.Size = new System.Drawing.Size(185, 64);
+            this.iconButton6.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.iconButton6.Size = new System.Drawing.Size(247, 79);
             this.iconButton6.TabIndex = 1;
             this.iconButton6.Tag = "Home";
             this.iconButton6.Text = "  iconButton2";
@@ -139,12 +145,14 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(185, 115);
+            this.panel1.Size = new System.Drawing.Size(247, 142);
             this.panel1.TabIndex = 0;
             // 
             // btnMenu
@@ -157,9 +165,10 @@
             this.btnMenu.IconColor = System.Drawing.Color.White;
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 25;
-            this.btnMenu.Location = new System.Drawing.Point(142, 0);
+            this.btnMenu.Location = new System.Drawing.Point(190, 0);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(43, 115);
+            this.btnMenu.Size = new System.Drawing.Size(57, 142);
             this.btnMenu.TabIndex = 3;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
@@ -169,8 +178,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::ProjectHotpot.Properties.Resources.image_2022_11_06_094757112_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 115);
+            this.pictureBox1.Size = new System.Drawing.Size(193, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -178,24 +188,28 @@
             // pnDashboard
             // 
             this.pnDashboard.BackColor = System.Drawing.Color.White;
+            this.pnDashboard.Controls.Add(this.panel2);
             this.pnDashboard.Controls.Add(this.textBox1);
             this.pnDashboard.Controls.Add(this.btnMaximized);
             this.pnDashboard.Controls.Add(this.btnMinimized);
             this.pnDashboard.Controls.Add(this.btnClose);
             this.pnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDashboard.Location = new System.Drawing.Point(185, 0);
+            this.pnDashboard.Location = new System.Drawing.Point(247, 0);
+            this.pnDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnDashboard.Name = "pnDashboard";
-            this.pnDashboard.Size = new System.Drawing.Size(615, 60);
+            this.pnDashboard.Size = new System.Drawing.Size(791, 69);
             this.pnDashboard.TabIndex = 1;
+            this.pnDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.pnDashboard_Paint);
             this.pnDashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnDashboard_MouseDown);
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 12);
+            this.textBox1.Location = new System.Drawing.Point(17, 11);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 28);
+            this.textBox1.Size = new System.Drawing.Size(169, 35);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "Dashboard";
             // 
@@ -209,9 +223,10 @@
             this.btnMaximized.IconColor = System.Drawing.Color.White;
             this.btnMaximized.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximized.IconSize = 15;
-            this.btnMaximized.Location = new System.Drawing.Point(529, 0);
+            this.btnMaximized.Location = new System.Drawing.Point(676, 0);
+            this.btnMaximized.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMaximized.Name = "btnMaximized";
-            this.btnMaximized.Size = new System.Drawing.Size(43, 24);
+            this.btnMaximized.Size = new System.Drawing.Size(57, 30);
             this.btnMaximized.TabIndex = 2;
             this.btnMaximized.UseVisualStyleBackColor = false;
             this.btnMaximized.Click += new System.EventHandler(this.btnMaximized_Click);
@@ -226,9 +241,10 @@
             this.btnMinimized.IconColor = System.Drawing.Color.White;
             this.btnMinimized.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimized.IconSize = 25;
-            this.btnMinimized.Location = new System.Drawing.Point(487, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(620, 0);
+            this.btnMinimized.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimized.Name = "btnMinimized";
-            this.btnMinimized.Size = new System.Drawing.Size(43, 24);
+            this.btnMinimized.Size = new System.Drawing.Size(57, 30);
             this.btnMinimized.TabIndex = 1;
             this.btnMinimized.UseVisualStyleBackColor = false;
             this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
@@ -243,26 +259,18 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Regular;
             this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(572, 0);
+            this.btnClose.Location = new System.Drawing.Point(734, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(43, 24);
+            this.btnClose.Size = new System.Drawing.Size(57, 30);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(185, 60);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(615, 390);
-            this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
             // rjDropdownMenu1
             // 
             this.rjDropdownMenu1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.rjDropdownMenu1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.rjDropdownMenu1.IsMainMenu = false;
             this.rjDropdownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýNhânViênToolStripMenuItem,
@@ -271,34 +279,61 @@
             this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenu1.Name = "rjDropdownMenu1";
             this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(15)))), ((int)(((byte)(48)))));
-            this.rjDropdownMenu1.Size = new System.Drawing.Size(171, 48);
+            this.rjDropdownMenu1.Size = new System.Drawing.Size(196, 52);
             // 
             // quảnLýNhânViênToolStripMenuItem
             // 
             this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
-            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
             this.quảnLýNhânViênToolStripMenuItem.Text = "Quản lý nhân viên";
             this.quảnLýNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNhânViênToolStripMenuItem_Click);
             // 
             // quảnLýMónĂnToolStripMenuItem
             // 
             this.quảnLýMónĂnToolStripMenuItem.Name = "quảnLýMónĂnToolStripMenuItem";
-            this.quảnLýMónĂnToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.quảnLýMónĂnToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
             this.quảnLýMónĂnToolStripMenuItem.Text = "Quản lý món ăn";
             this.quảnLýMónĂnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýMónĂnToolStripMenuItem_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 76);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(820, 478);
+            this.panel2.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(247, 79);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(791, 475);
+            this.panel3.TabIndex = 4;
+            // 
+            // pnContent
+            // 
+            this.pnContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pnContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContent.Location = new System.Drawing.Point(247, 69);
+            this.pnContent.Name = "pnContent";
+            this.pnContent.Size = new System.Drawing.Size(791, 485);
+            this.pnContent.TabIndex = 4;
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(15)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1038, 554);
+            this.Controls.Add(this.pnContent);
             this.Controls.Add(this.pnDashboard);
             this.Controls.Add(this.pnSidebar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load_1);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.pnSidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -314,7 +349,6 @@
 
         private System.Windows.Forms.Panel pnSidebar;
         private System.Windows.Forms.Panel pnDashboard;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.ServiceProcess.ServiceController serviceController1;
         private System.ServiceProcess.ServiceController serviceController2;
@@ -330,5 +364,8 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhânViênToolStripMenuItem;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýMónĂnToolStripMenuItem;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnContent;
+        private System.Windows.Forms.Panel panel3;
     }
 }

@@ -311,4 +311,3 @@ E:\2231\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.Fody.C
 E:\2231\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.CopyComplete
 E:\2231\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.exe
 E:\2231\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.pdb
-E:\2231\ProjectHotPotWinform\ProjectHotpot\obj\Debug\RestaurantManager.fTableManager.resources

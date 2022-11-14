@@ -23,6 +23,8 @@ namespace ProjectHotpot
             CollapseMenu(); 
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(191, 15, 48); ;
+            this.WindowState = FormWindowState.Maximized;
+            //pnDashboard.Margin = new Padding(20);
         }
        
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -235,7 +237,7 @@ namespace ProjectHotpot
             form.MdiParent = this;
             LayoutMdi(MdiLayout.TileHorizontal);
             form.Show();
-        }
+         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
@@ -244,9 +246,14 @@ namespace ProjectHotpot
 
         private void quảnLýMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DishManagementForm form = new DishManagementForm();
-            form.MdiParent = this.MdiParent;
+            TableManagementForm form = new TableManagementForm()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill
+            };
+            form.MdiParent = this;
             LayoutMdi(MdiLayout.TileHorizontal);
+            pnContent.Controls.Add(form);
             form.Show();
            
         }
@@ -257,6 +264,14 @@ namespace ProjectHotpot
 
         }
 
-      
+        private void pnDashboard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load_1(object sender, EventArgs e)
+        {
+                
+        }
     }
 }
