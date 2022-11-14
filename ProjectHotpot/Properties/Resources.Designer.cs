@@ -93,6 +93,16 @@ namespace ProjectHotpot.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chuoi_nha_hang_hotpot_story_1 {
+            get {
+                object obj = ResourceManager.GetObject("chuoi-nha-hang-hotpot-story-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cropped_shot_delicious_shabu_hot_pot_black_background_japanese_hotpot_style_164605556 {
             get {
                 object obj = ResourceManager.GetObject("cropped-shot-delicious-shabu-hot-pot-black-background-japanese-hotpot-style-16460" +

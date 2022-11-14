@@ -232,7 +232,7 @@ namespace ProjectHotpot
         {
            
             EmployeeManagementForm form = new EmployeeManagementForm();
-            form.MdiParent = this.MdiParent;
+            form.MdiParent = this;
             LayoutMdi(MdiLayout.TileHorizontal);
             form.Show();
         }
