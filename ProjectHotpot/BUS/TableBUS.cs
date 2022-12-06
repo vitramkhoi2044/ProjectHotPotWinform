@@ -19,5 +19,22 @@ namespace ProjectHotpot.BUS
             }
             return null;
         }
+
+        public Table GetTableDetail(string name)
+        {
+            Table table = new TableDAO().SelectByName(name);
+            if (table != null)
+            {
+                return table;
+            }
+            return null;
+        }
+
+        public bool UpdateTable(Table newTable)
+        {
+         
+            bool result = new TableDAO().Update(newTable);
+            return result;
+        }
     }
 }

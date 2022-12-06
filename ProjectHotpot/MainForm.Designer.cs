@@ -34,8 +34,6 @@
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnDashboard = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,8 +46,9 @@
             this.rjDropdownMenu1 = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýMónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnContent = new System.Windows.Forms.Panel();
             this.quảnLýBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnContent = new System.Windows.Forms.Panel();
+            this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.pnSidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +67,7 @@
             this.pnSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnSidebar.Name = "pnSidebar";
-            this.pnSidebar.Size = new System.Drawing.Size(185, 450);
+            this.pnSidebar.Size = new System.Drawing.Size(194, 450);
             this.pnSidebar.TabIndex = 0;
             this.pnSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -87,7 +86,7 @@
             this.iconButton1.Location = new System.Drawing.Point(0, 179);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(185, 64);
+            this.iconButton1.Size = new System.Drawing.Size(194, 64);
             this.iconButton1.TabIndex = 2;
             this.iconButton1.Tag = "Quản lý";
             this.iconButton1.Text = "  iconButton2";
@@ -110,7 +109,7 @@
             this.iconButton7.Location = new System.Drawing.Point(0, 411);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton7.Size = new System.Drawing.Size(185, 39);
+            this.iconButton7.Size = new System.Drawing.Size(194, 39);
             this.iconButton7.TabIndex = 1;
             this.iconButton7.Tag = "Exit";
             this.iconButton7.Text = "  Sign out";
@@ -132,7 +131,7 @@
             this.iconButton6.Location = new System.Drawing.Point(0, 115);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton6.Size = new System.Drawing.Size(185, 64);
+            this.iconButton6.Size = new System.Drawing.Size(194, 64);
             this.iconButton6.TabIndex = 1;
             this.iconButton6.Tag = "Home";
             this.iconButton6.Text = "  iconButton2";
@@ -142,39 +141,13 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(185, 115);
+            this.panel1.Size = new System.Drawing.Size(194, 115);
             this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(185, 64);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(593, 386);
-            this.panel3.TabIndex = 4;
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(15)))), ((int)(((byte)(48)))));
-            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.IconChar = FontAwesome.Sharp.IconChar.Navicon;
-            this.btnMenu.IconColor = System.Drawing.Color.White;
-            this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMenu.IconSize = 25;
-            this.btnMenu.Location = new System.Drawing.Point(142, 0);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(43, 115);
-            this.btnMenu.TabIndex = 3;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // pictureBox1
             // 
@@ -182,7 +155,7 @@
             this.pictureBox1.Image = global::ProjectHotpot.Properties.Resources.image_2022_11_06_094757112_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 115);
+            this.pictureBox1.Size = new System.Drawing.Size(136, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -196,9 +169,9 @@
             this.pnDashboard.Controls.Add(this.btnMinimized);
             this.pnDashboard.Controls.Add(this.btnClose);
             this.pnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDashboard.Location = new System.Drawing.Point(185, 0);
+            this.pnDashboard.Location = new System.Drawing.Point(194, 0);
             this.pnDashboard.Name = "pnDashboard";
-            this.pnDashboard.Size = new System.Drawing.Size(593, 56);
+            this.pnDashboard.Size = new System.Drawing.Size(584, 56);
             this.pnDashboard.TabIndex = 1;
             this.pnDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.pnDashboard_Paint);
             this.pnDashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnDashboard_MouseDown);
@@ -206,7 +179,7 @@
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(0, 62);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(615, 388);
             this.panel2.TabIndex = 4;
@@ -231,7 +204,7 @@
             this.btnMaximized.IconColor = System.Drawing.Color.White;
             this.btnMaximized.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximized.IconSize = 15;
-            this.btnMaximized.Location = new System.Drawing.Point(507, 0);
+            this.btnMaximized.Location = new System.Drawing.Point(498, 0);
             this.btnMaximized.Name = "btnMaximized";
             this.btnMaximized.Size = new System.Drawing.Size(43, 24);
             this.btnMaximized.TabIndex = 2;
@@ -248,7 +221,7 @@
             this.btnMinimized.IconColor = System.Drawing.Color.White;
             this.btnMinimized.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimized.IconSize = 25;
-            this.btnMinimized.Location = new System.Drawing.Point(465, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(456, 0);
             this.btnMinimized.Name = "btnMinimized";
             this.btnMinimized.Size = new System.Drawing.Size(43, 24);
             this.btnMinimized.TabIndex = 1;
@@ -265,7 +238,7 @@
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Regular;
             this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(550, 0);
+            this.btnClose.Location = new System.Drawing.Point(541, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 24);
             this.btnClose.TabIndex = 1;
@@ -290,34 +263,51 @@
             // quảnLýNhânViênToolStripMenuItem
             // 
             this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
-            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.quảnLýNhânViênToolStripMenuItem.Text = "Quản lý nhân viên";
             this.quảnLýNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNhânViênToolStripMenuItem_Click);
             // 
             // quảnLýMónĂnToolStripMenuItem
             // 
             this.quảnLýMónĂnToolStripMenuItem.Name = "quảnLýMónĂnToolStripMenuItem";
-            this.quảnLýMónĂnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quảnLýMónĂnToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.quảnLýMónĂnToolStripMenuItem.Text = "Quản lý món ăn";
             this.quảnLýMónĂnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýMónĂnToolStripMenuItem_Click);
+            // 
+            // quảnLýBànToolStripMenuItem
+            // 
+            this.quảnLýBànToolStripMenuItem.Name = "quảnLýBànToolStripMenuItem";
+            this.quảnLýBànToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.quảnLýBànToolStripMenuItem.Text = "Quản lý bàn";
+            this.quảnLýBànToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBànToolStripMenuItem_Click);
             // 
             // pnContent
             // 
             this.pnContent.BackColor = System.Drawing.Color.Maroon;
             this.pnContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContent.Location = new System.Drawing.Point(185, 56);
-            this.pnContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnContent.Location = new System.Drawing.Point(194, 56);
+            this.pnContent.Margin = new System.Windows.Forms.Padding(2);
             this.pnContent.Name = "pnContent";
-            this.pnContent.Size = new System.Drawing.Size(593, 394);
+            this.pnContent.Size = new System.Drawing.Size(584, 394);
             this.pnContent.TabIndex = 4;
             // 
-            // quảnLýBànToolStripMenuItem
+            // btnMenu
             // 
-            this.quảnLýBànToolStripMenuItem.Name = "quảnLýBànToolStripMenuItem";
-            this.quảnLýBànToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.quảnLýBànToolStripMenuItem.Text = "Quản lý bàn";
-            this.quảnLýBànToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBànToolStripMenuItem_Click);
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(15)))), ((int)(((byte)(48)))));
+            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.IconChar = FontAwesome.Sharp.IconChar.Navicon;
+            this.btnMenu.IconColor = System.Drawing.Color.White;
+            this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMenu.IconSize = 25;
+            this.btnMenu.Location = new System.Drawing.Point(136, 0);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(58, 115);
+            this.btnMenu.TabIndex = 3;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // MainForm
             // 
@@ -357,7 +347,6 @@
         private FontAwesome.Sharp.IconButton btnMinimized;
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton btnMaximized;
-        private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenu1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhânViênToolStripMenuItem;
@@ -365,7 +354,7 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýMónĂnToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnContent;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolStripMenuItem quảnLýBànToolStripMenuItem;
+        private FontAwesome.Sharp.IconButton btnMenu;
     }
 }

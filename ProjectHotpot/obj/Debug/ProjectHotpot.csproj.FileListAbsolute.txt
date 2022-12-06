@@ -488,3 +488,10 @@ C:\Users\Asus\OneDrive\Documents\Hoc tap\Lập trình Web FE\ProjectHotPotWinfor
 C:\Users\Asus\OneDrive\Documents\Hoc tap\Lập trình Web FE\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.CopyComplete
 C:\Users\Asus\OneDrive\Documents\Hoc tap\Lập trình Web FE\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.exe
 C:\Users\Asus\OneDrive\Documents\Hoc tap\Lập trình Web FE\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.pdb
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.ChangePasswordForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.CustomerAddEditForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.CustomerManagementForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.IngredientAddEditForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.IngredientManagementForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.MainForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.TableManagementForm.resources

@@ -35,13 +35,13 @@ namespace ProjectHotpot
       
         public void loadListTable()
         {
-            pnListTable.Controls.Clear();
+            flowLayoutPanel1.Controls.Clear();
             List<Table> listTable = new TableBUS().GetAll();
-            pnListTable.Padding = new Padding(0, 20, 0, 0);
+            flowLayoutPanel1.Padding = new Padding(0, 20, 0, 0);
             foreach (Table item in listTable)
             {
                 Button button = new Button();
-                button.Text = "Bàn " + item.TableName + "\n" + ( item.TableStatus == "False" ? "Trống" : "Có người");
+                button.Text =  item.TableName + "\n" + ( item.TableStatus == "False" ? "Trống" : "Có người");
                 button.Width = 123;
                 button.Height = 115;
             
@@ -59,8 +59,8 @@ namespace ProjectHotpot
                     button.ForeColor = Color.FromArgb(0, 143, 140);
                     button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(1, 89, 88);
                 }
-               // button.Click += Button_Click;
-                pnListTable.Controls.Add(button);
+                // button.Click += Button_Click;
+                flowLayoutPanel1.Controls.Add(button);
 
             }
          
@@ -170,6 +170,49 @@ namespace ProjectHotpot
         private void TableManagementForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbListTable_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string selected = this.cbListTable.GetItemText(this.cbListTable.SelectedItem);
+            Table table = new TableBUS().GetTableDetail(selected);
+            if(table.TableStatus == "False")
+            {
+                string [] arr = { "False", "True"};
+                cbTableStatus.DataSource = arr;
+            } else
+            {
+                string[] arr = { "True", "False" };
+                cbTableStatus.DataSource = arr;
+            }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            string name = this.cbListTable.GetItemText(this.cbListTable.SelectedItem);
+            string status = this.cbTableStatus.GetItemText(this.cbTableStatus.SelectedItem);
+            int id = Int32.Parse(name.Substring(name.Length - 1));
+
+            Table newTable = new Table();
+            newTable.TableID = id;
+            newTable.TableName = name;
+            newTable.TableStatus = status;
+
+            bool result = new TableBUS().UpdateTable(newTable);
+            if (result)
+            {
+                MessageBox.Show("Update table sucessful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                loadListTable();
+            }
+            else
+            {
+                MessageBox.Show("Sorry update dish fail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

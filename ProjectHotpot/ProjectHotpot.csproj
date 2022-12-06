@@ -317,12 +317,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableManagementForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TableManagementForm.Designer.cs">
-      <DependentUpon>TableManagementForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +332,12 @@
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlDataAccessHelper.cs" />
+    <Compile Include="TableManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableManagementForm.designer.cs">
+      <DependentUpon>TableManagementForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,9 +371,6 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TableManagementForm.resx">
-      <DependentUpon>TableManagementForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableManagementForm.resx">
+      <DependentUpon>TableManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjectHotpot.DTO.Customer.datasource" />

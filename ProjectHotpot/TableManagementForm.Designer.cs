@@ -34,16 +34,16 @@
             this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.serviceController2 = new System.ServiceProcess.ServiceController();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pnListTable = new System.Windows.Forms.Panel();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton3 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton4 = new RJCodeAdvance.RJControls.RJButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbListTable = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbTableStatus = new System.Windows.Forms.ComboBox();
+            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.pnDashboard.SuspendLayout();
-            this.pnListTable.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -78,105 +78,11 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // pnListTable
-            // 
-            this.pnListTable.BackColor = System.Drawing.Color.Black;
-            this.pnListTable.Controls.Add(this.rjButton2);
-            this.pnListTable.Controls.Add(this.rjButton3);
-            this.pnListTable.Controls.Add(this.rjButton1);
-            this.pnListTable.Controls.Add(this.rjButton4);
-            this.pnListTable.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnListTable.Location = new System.Drawing.Point(0, 0);
-            this.pnListTable.Margin = new System.Windows.Forms.Padding(2);
-            this.pnListTable.Name = "pnListTable";
-            this.pnListTable.Size = new System.Drawing.Size(830, 528);
-            this.pnListTable.TabIndex = 0;
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rjButton2.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rjButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(89)))), ((int)(((byte)(88)))));
-            this.rjButton2.BorderRadius = 0;
-            this.rjButton2.BorderSize = 2;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(140)))));
-            this.rjButton2.Location = new System.Drawing.Point(158, 15);
-            this.rjButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(101, 115);
-            this.rjButton2.TabIndex = 0;
-            this.rjButton2.Text = " Bàn 3 \rCó người";
-            this.rjButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(140)))));
-            this.rjButton2.UseVisualStyleBackColor = false;
-            // 
-            // rjButton3
-            // 
-            this.rjButton3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rjButton3.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rjButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(89)))), ((int)(((byte)(88)))));
-            this.rjButton3.BorderRadius = 0;
-            this.rjButton3.BorderSize = 2;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(140)))));
-            this.rjButton3.Location = new System.Drawing.Point(292, 15);
-            this.rjButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(104, 115);
-            this.rjButton3.TabIndex = 0;
-            this.rjButton3.Text = " Bàn 3 \rCó người";
-            this.rjButton3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(140)))));
-            this.rjButton3.UseVisualStyleBackColor = false;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rjButton1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 2;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.rjButton1.Location = new System.Drawing.Point(22, 15);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(123, 115);
-            this.rjButton1.TabIndex = 0;
-            this.rjButton1.Text = " Bàn 4 \r\nTrống\r\n";
-            this.rjButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // rjButton4
-            // 
-            this.rjButton4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rjButton4.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.rjButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.rjButton4.BorderRadius = 0;
-            this.rjButton4.BorderSize = 2;
-            this.rjButton4.FlatAppearance.BorderSize = 0;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.rjButton4.Location = new System.Drawing.Point(432, 15);
-            this.rjButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(99, 115);
-            this.rjButton4.TabIndex = 0;
-            this.rjButton4.Text = " Bàn 4 \r\nTrống\r\n";
-            this.rjButton4.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.rjButton4.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Controls.Add(this.flowLayoutPanel1);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.pnListTable);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 88);
             this.panel3.Name = "panel3";
@@ -186,6 +92,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.rjButton1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.cbTableStatus);
             this.panel1.Controls.Add(this.cbListTable);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(826, 0);
@@ -196,10 +107,86 @@
             // cbListTable
             // 
             this.cbListTable.FormattingEnabled = true;
-            this.cbListTable.Location = new System.Drawing.Point(26, 15);
+            this.cbListTable.Location = new System.Drawing.Point(113, 53);
             this.cbListTable.Name = "cbListTable";
             this.cbListTable.Size = new System.Drawing.Size(121, 21);
             this.cbListTable.TabIndex = 0;
+            this.cbListTable.SelectionChangeCommitted += new System.EventHandler(this.cbListTable_SelectionChangeCommitted);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(826, 528);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Black;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.textBox2.Location = new System.Drawing.Point(12, 25);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(222, 22);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "Trạng thái bàn";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(9, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Tên bàn:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(9, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Trạng thái bàn:";
+            this.label2.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // cbTableStatus
+            // 
+            this.cbTableStatus.FormattingEnabled = true;
+            this.cbTableStatus.Location = new System.Drawing.Point(113, 90);
+            this.cbTableStatus.Name = "cbTableStatus";
+            this.cbTableStatus.Size = new System.Drawing.Size(121, 21);
+            this.cbTableStatus.TabIndex = 0;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.Orange;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.Orange;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 0;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(101, 133);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(181, 40);
+            this.rjButton1.TabIndex = 5;
+            this.rjButton1.Text = "Update trạng thái bàn";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // TableManagementForm
             // 
@@ -216,9 +203,9 @@
             this.Resize += new System.EventHandler(this.TableManagementForm_Resize);
             this.pnDashboard.ResumeLayout(false);
             this.pnDashboard.PerformLayout();
-            this.pnListTable.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -229,13 +216,14 @@
         private System.ServiceProcess.ServiceController serviceController2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Panel pnListTable;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
-        private RJCodeAdvance.RJControls.RJButton rjButton3;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
-        private RJCodeAdvance.RJControls.RJButton rjButton4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbListTable;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbTableStatus;
+        private RJCodeAdvance.RJControls.RJButton rjButton1;
     }
 }

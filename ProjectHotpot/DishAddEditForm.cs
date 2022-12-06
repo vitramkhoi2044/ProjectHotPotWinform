@@ -143,5 +143,10 @@ namespace ProjectHotpot
                 }
             }
         }
+
+        private void DishAddEditForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
