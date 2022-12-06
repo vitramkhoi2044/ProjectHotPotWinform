@@ -236,6 +236,7 @@
     <Compile Include="BUS\DishCategoryBUS.cs" />
     <Compile Include="BUS\EmployeeBUS.cs" />
     <Compile Include="BUS\IngredientBUS.cs" />
+    <Compile Include="BUS\TableBUS.cs" />
     <Compile Include="ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +260,7 @@
     <Compile Include="DAO\DishDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\IngredientDAO.cs" />
+    <Compile Include="DAO\TableDAO.cs" />
     <Compile Include="DishAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +279,7 @@
     <Compile Include="DTO\DTOValidator.cs" />
     <Compile Include="DTO\Employee.cs" />
     <Compile Include="DTO\Ingredient.cs" />
+    <Compile Include="DTO\Table.cs" />
     <Compile Include="EmployeeAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>

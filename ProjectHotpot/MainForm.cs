@@ -20,11 +20,12 @@ namespace ProjectHotpot
         public MainForm()
         {
             InitializeComponent();
-            CollapseMenu(); 
+            CollapseMenu();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
-            this.BackColor = Color.FromArgb(191, 15, 48); ;
+            this.BackColor = Color.FromArgb(191, 15, 48);
             this.WindowState = FormWindowState.Maximized;
-            //pnDashboard.Margin = new Padding(20);
+            
         }
        
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -147,7 +148,7 @@ namespace ProjectHotpot
             switch (this.WindowState)
             {
                 case FormWindowState.Maximized:
-                    this.Padding = new Padding(0, 8, 8, 0);
+                
                     break;
                 case FormWindowState.Normal:
                    if(this.Padding.Top != borderSize)
@@ -232,11 +233,18 @@ namespace ProjectHotpot
 
         private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-            EmployeeManagementForm form = new EmployeeManagementForm();
+
+            EmployeeManagementForm form = new EmployeeManagementForm()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill
+            };
             form.MdiParent = this;
             LayoutMdi(MdiLayout.TileHorizontal);
+            pnContent.Controls.Add(form);
             form.Show();
+           
+          
          }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -246,15 +254,7 @@ namespace ProjectHotpot
 
         private void quảnLýMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TableManagementForm form = new TableManagementForm()
-            {
-                TopLevel = false,
-                Dock = DockStyle.Fill
-            };
-            form.MdiParent = this;
-            LayoutMdi(MdiLayout.TileHorizontal);
-            pnContent.Controls.Add(form);
-            form.Show();
+            
            
         }
 
@@ -269,9 +269,17 @@ namespace ProjectHotpot
 
         }
 
-        private void MainForm_Load_1(object sender, EventArgs e)
+        private void quảnLýBànToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                
+            TableManagementForm form = new TableManagementForm()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill
+            };
+            form.MdiParent = this;
+            LayoutMdi(MdiLayout.TileHorizontal);
+            pnContent.Controls.Add(form);
+            form.Show();
         }
     }
 }

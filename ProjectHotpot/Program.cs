@@ -16,7 +16,7 @@ namespace ProjectHotpot
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChangePasswordForm("khoivi"));
+            Application.Run(new TableManagementForm());
         }
     }
 }
