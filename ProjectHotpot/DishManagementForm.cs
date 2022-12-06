@@ -41,7 +41,7 @@ namespace ProjectHotpot
             }
             else
             {
-                MessageBox.Show("Cannot Load Data!!!");
+                MessageBox.Show("Cannot load data", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -67,7 +67,7 @@ namespace ProjectHotpot
             }
             else
             {
-                MessageBox.Show("Cannot Load Data!!!");
+                MessageBox.Show("Cannot load data", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -102,19 +102,45 @@ namespace ProjectHotpot
                     bool result = new DishBUS().DeleteDish(ID);
                     if (result)
                     {
+                        MessageBox.Show("Delete dish successful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         loadListDish();
                     }
                     else
                     {
-                        MessageBox.Show("Sorry Delete Motorcycles Fail!!!");
+                        MessageBox.Show("Sorry delete dish fail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if(e.KeyCode == Keys.Enter)
+            {
+                string keyword = txtSearch.Text.ToString().Trim();
+                List<Dish> dishes = new DishBUS().Search(keyword);
+                if (dishes != null)
+                {
+                    dgvDish.Rows.Clear();
+                    foreach (var dish in dishes)
+                    {
+                        dgvDish.Rows.Add(new object[]
+                        {
+                            dish.DishID,
+                            dish.DishName,
+                            dish.DishPrice,
+                            dish.Image,
+                            dish.CategoryID,
+                            "Edit",
+                            "Delete"
+                        });
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Cannot load data", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

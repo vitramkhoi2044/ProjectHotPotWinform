@@ -231,12 +231,34 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CustomerBUS.cs" />
     <Compile Include="BUS\DishBUS.cs" />
     <Compile Include="BUS\DishCategoryBUS.cs" />
     <Compile Include="BUS\EmployeeBUS.cs" />
+    <Compile Include="BUS\IngredientBUS.cs" />
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerAddEditForm.designer.cs">
+      <DependentUpon>CustomerAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerManagementForm.designer.cs">
+      <DependentUpon>CustomerManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\CustomerDAO.cs" />
     <Compile Include="DAO\DishCategoryDAO.cs" />
     <Compile Include="DAO\DishDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
+    <Compile Include="DAO\IngredientDAO.cs" />
     <Compile Include="DishAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,10 +271,12 @@
     <Compile Include="DishManagementForm.designer.cs">
       <DependentUpon>DishManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\Customer.cs" />
     <Compile Include="DTO\Dish.cs" />
     <Compile Include="DTO\DishCategory.cs" />
     <Compile Include="DTO\DTOValidator.cs" />
     <Compile Include="DTO\Employee.cs" />
+    <Compile Include="DTO\Ingredient.cs" />
     <Compile Include="EmployeeAddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +296,18 @@
       <DependentUpon>DishViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperMethod.cs" />
+    <Compile Include="IngredientAddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngredientAddEditForm.designer.cs">
+      <DependentUpon>IngredientAddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngredientManagementForm.designer.cs">
+      <DependentUpon>IngredientManagementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +335,15 @@
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlDataAccessHelper.cs" />
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAddEditForm.resx">
+      <DependentUpon>CustomerAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerManagementForm.resx">
+      <DependentUpon>CustomerManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DishAddEditForm.resx">
       <DependentUpon>DishAddEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +358,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DishViewForm.resx">
       <DependentUpon>DishViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngredientAddEditForm.resx">
+      <DependentUpon>IngredientAddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngredientManagementForm.resx">
+      <DependentUpon>IngredientManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -332,8 +383,10 @@
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ProjectHotpot.DTO.Customer.datasource" />
     <None Include="Properties\DataSources\ProjectHotpot.DTO.Dish.datasource" />
     <None Include="Properties\DataSources\ProjectHotpot.DTO.Employee.datasource" />
+    <None Include="Properties\DataSources\ProjectHotpot.DTO.Ingredient.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

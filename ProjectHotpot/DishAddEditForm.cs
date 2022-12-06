@@ -8,10 +8,12 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Imaging;
 using System.Xml.Linq;
 using ProjectHotpot.BUS;
 using ProjectHotpot.DAO;
 using ProjectHotpot.DTO;
+using RestSharp.Extensions;
 using static Bunifu.UI.WinForms.BunifuSnackbar;
 
 namespace ProjectHotpot
@@ -59,13 +61,13 @@ namespace ProjectHotpot
                     bool result = new DishBUS().AddNewDish(newDish, categoryName);
                     if (result)
                     {
-                        MessageBox.Show("Add new dish sucessful!!!");
+                        MessageBox.Show("Add new dish sucessful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         addStatus = true;
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show("Sorry add new dish fail!!!");
+                        MessageBox.Show("Sorry add new dish fail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -84,20 +86,20 @@ namespace ProjectHotpot
             dishBindingSource.EndEdit();
             Dish newDish = dishBindingSource.Current as Dish;
             newDish.DishID = this.dish.DishID;
-            newDish.Image = HelperMethod.ConvertImageToBinary(pbImageDish.Image);
+            newDish.Image = HelperMethod.ConvertBitmapImageToBinary(new Bitmap(pbImageDish.Image));
             string categoryName = cbCategory.Text.ToString().Trim();
             if (newDish.IsValid)
             {
                 bool result = new DishBUS().UpdateDish(newDish, categoryName);
                 if (result)
                 {
-                    MessageBox.Show("Update dish sucessful!!!");
+                    MessageBox.Show("Update dish sucessful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     updateStatus = true;
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Sorry update dish fail!!!");
+                    MessageBox.Show("Sorry update dish fail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

@@ -80,6 +80,30 @@ namespace ProjectHotpot.DAO
             }
             return null;
         }
+        public List<Employee> SelectByKeyword(string keyword)
+        {
+            string query = "Select * From Employees Where EmployeeName LIKE @Keyword";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Keyword", keyword);
+            DataTable dataTable = SqlDataAccessHelper.ExecuteSelectQuery(query, sqlParameters);
+            List<Employee> employees = new List<Employee>();
+            if (dataTable != null)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    Employee employee = new Employee();
+                    employee.EmployeeID = int.Parse(row["EmployeeID"].ToString());
+                    employee.EmployeeName = row["EmployeeName"].ToString();
+                    employee.Shift = row["Shift"].ToString();
+                    employee.EmployeeStatus = row["EmployeeStatus"].ToString();
+                    employee.Position = row["Position"].ToString();
+                    employee.Username = row["Username"].ToString();
+                    employees.Add(employee);
+                }
+                return employees;
+            }
+            return null;
+        }
         public bool Insert(Employee newEmployee)
         {
             string query = "Insert into Employees(EmployeeName,Shift,EmployeeStatus,Position,Username,Password) Values(@EmployeeName,@Shift,@EmployeeStatus,@Position,@Username,@Password)";
@@ -105,7 +129,15 @@ namespace ProjectHotpot.DAO
             bool result = SqlDataAccessHelper.ExecuteUpdateQuery(query, sqlParameters);
             return result;
         }
-
+        public bool UpdatePasswordByUserName(string userName, string newPassword)
+        {
+            string query = "UPDATE Employees SET Password = @Password WHERE Username = @Username";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@Password", newPassword);
+            sqlParameters[1] = new SqlParameter("@Username", userName);
+            bool result = SqlDataAccessHelper.ExecuteUpdateQuery(query, sqlParameters);
+            return result;
+        }
         public bool Delete(int EmployeeID)
         {
             String query = "Delete from Employees where EmployeeID=@EmployeeID";

@@ -61,6 +61,13 @@ namespace ProjectHotpot
                 return ms.ToArray();
             }
         }
+
+        public static byte[] ConvertBitmapImageToBinary(Image img)
+        {
+            ImageConverter converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        }
+
         public static Image ConvertBinaryToImage(byte[] data)
         {
             using (MemoryStream ms = new MemoryStream(data))

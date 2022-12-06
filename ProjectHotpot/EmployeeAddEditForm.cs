@@ -55,13 +55,13 @@ namespace ProjectHotpot
                     if (result)
                     {
                         MessageBox.Show(newEmployee.EmployeeName);
-                        MessageBox.Show("Add new employee sucessful!!!");
+                        MessageBox.Show("Add new employee sucessful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         addStatus = true;
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show("Sorry add new employee fail!!!");
+                        MessageBox.Show("Sorry add new employee fail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -86,44 +86,19 @@ namespace ProjectHotpot
                 bool result = new EmployeeBUS().UpdateEmployee(newEmployee);
                 if (result)
                 {
-                    MessageBox.Show("Update employee sucessful!!!");
+                    MessageBox.Show("Update employee sucessful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     updateStatus = true;
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("Sorry update employee fail!!!");
+                    MessageBox.Show("Sorry update employee fail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
                 MessageBox.Show("Vui lòng sửa lại các trường chưa hợp lệ","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddEditForm_Load(object sender, EventArgs e)
-        {
-
         }
         public bool getAddStatus()
         {
@@ -132,11 +107,6 @@ namespace ProjectHotpot
         public bool getUpdateStatus()
         {
             return updateStatus;
-        }
-
-        private void txtUsername_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

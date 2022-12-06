@@ -40,6 +40,12 @@ namespace ProjectHotpot.BUS
             }
             return false;
         }
+        public bool ChangePassword(String userName, String newPassword)
+        {
+            newPassword = HelperMethod.Encrypt(newPassword);
+            bool result = new EmployeeDAO().UpdatePasswordByUserName(userName, newPassword);
+            return result;
+        }
         public bool AddNewEmployee(Employee newEmployee)
         {
             String password = "123456";//Defaul Password
@@ -53,7 +59,16 @@ namespace ProjectHotpot.BUS
             Employee employee = new EmployeeDAO().SelectByID(ID);
             return employee;
         }
-
+        public List<Employee> Search(string keyword)
+        {
+            keyword = '%' + keyword.ToLower() + '%';
+            List<Employee> employees = new EmployeeDAO().SelectByKeyword(keyword);
+            if (employees != null)
+            {
+                return employees;
+            }
+            return null;
+        }
         public bool UpdateEmployee(Employee newEmployee)
         {
             bool result = new EmployeeDAO().Update(newEmployee);

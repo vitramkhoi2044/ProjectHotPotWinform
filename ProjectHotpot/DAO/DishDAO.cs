@@ -59,22 +59,26 @@ namespace ProjectHotpot.DAO
             }
             return null;
         }
-        public Dish SelectByKeyword(string keyword)
+        public List<Dish> SelectByKeyword(string keyword)
         {
             string query = "Select * From Dishes Where DishName LIKE @Keyword";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@Keyword", keyword);
             DataTable dataTable = SqlDataAccessHelper.ExecuteSelectQuery(query, sqlParameters);
+            List<Dish> dishes = new List<Dish>();
             if (dataTable.Rows.Count > 0)
             {
-                Dish dish = new Dish();
-                DataRow row = dataTable.Rows[0];
-                dish.DishID = int.Parse(row["DishID"].ToString());
-                dish.DishName = row["DishName"].ToString();
-                dish.DishPrice = int.Parse(row["DishPrice"].ToString());
-                dish.Image = (byte[])(row["Image"]);
-                dish.CategoryID = int.Parse(row["CategoryID"].ToString());
-                return dish;
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    Dish dish = new Dish();
+                    dish.DishID = int.Parse(row["DishID"].ToString());
+                    dish.DishName = row["DishName"].ToString();
+                    dish.DishPrice = int.Parse(row["DishPrice"].ToString());
+                    dish.Image = (byte[])(row["Image"]);
+                    dish.CategoryID = int.Parse(row["CategoryID"].ToString());
+                    dishes.Add(dish);
+                }
+                return dishes;
             }
             return null;
         }

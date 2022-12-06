@@ -11,7 +11,6 @@ namespace ProjectHotpot.DTO
     {
         public int DishID { get; set; }
         [Required(ErrorMessage = "Tên món ăn không được trống")]
-        [RegularExpression(@"^.*[a-zA-Z]", ErrorMessage = "Tên món ăn chỉ chứa ký tự a-z và A-Z")]
         public string DishName { get; set; }
         [Required(ErrorMessage = "Giá món ăn không được trống")]
         [RegularExpression(@"^.*[0-9]", ErrorMessage = "Giá món ăn chỉ chứa ký tự 0-9")]

@@ -29,11 +29,11 @@ namespace ProjectHotpot
             bool result = new EmployeeBUS().Login(userName, password);
             if (result)
             {
-                MessageBox.Show("Login Sucessful Welcome to my app");
+                MessageBox.Show("Login Sucessful Welcome to my app", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Your Username or Password incorrect!!! Please try again");
+                MessageBox.Show("Your Username or Password incorrect!!! Please try again","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 txtPassword.Text = "";
                 txtUserName.Focus();
             }

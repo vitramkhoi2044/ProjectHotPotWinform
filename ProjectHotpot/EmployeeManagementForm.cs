@@ -42,7 +42,7 @@ namespace ProjectHotpot
             }
             else
             {
-                MessageBox.Show("Cannot Load Data!!!");
+                MessageBox.Show("Cannot load data", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
        
@@ -67,11 +67,12 @@ namespace ProjectHotpot
                     bool result = new EmployeeBUS().DeleteEmployee(ID);
                     if (result)
                     {
+                        MessageBox.Show("Delete employee successful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         loadListEmployee();
                     }
                     else
                     {
-                        MessageBox.Show("Sorry Delete Employees Fail!!!");
+                        MessageBox.Show("Sorry delete employees fail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -109,13 +110,39 @@ namespace ProjectHotpot
             }
             else
             {
-                MessageBox.Show("Cannot Load Data!!!");
+                MessageBox.Show("Cannot load data", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void dgvEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                string keyword = txtSearch.Text.ToString().Trim();
+                List<Employee> emps = new EmployeeBUS().Search(keyword);
+                if (emps != null)
+                {
+                    dgvEmployee.Rows.Clear();
+                    foreach (var emp in emps)
+                    {
+                        dgvEmployee.Rows.Add(new object[]
+                        {
+                            emp.EmployeeID,
+                            emp.EmployeeName,
+                            emp.Shift,
+                            emp.EmployeeStatus,
+                            emp.Position,
+                            emp.Username,
+                            "Edit",
+                            "Delete"
+                        });
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Cannot load data", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

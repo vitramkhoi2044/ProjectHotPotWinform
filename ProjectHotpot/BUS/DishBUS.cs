@@ -28,12 +28,13 @@ namespace ProjectHotpot.BUS
             }
             return null;
         }
-        public Dish Search(string keyword)
+        public List<Dish> Search(string keyword)
         {
-            Dish dish = new DishDAO().SelectByKeyword(keyword);
-            if (dish != null)
+            keyword = '%' + keyword.ToLower() + '%';
+            List<Dish> dishes = new DishDAO().SelectByKeyword(keyword);
+            if (dishes != null)
             {
-                return dish;
+                return dishes;
             }
             return null;
         }
