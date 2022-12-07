@@ -20,14 +20,14 @@ namespace ProjectHotpot
     public partial class TableManagementForm : Form
     {
         private int borderSize = 2;
-        private Size formSize;
+       
         public TableManagementForm()
         {
             InitializeComponent();
            // menuStrip1.BackColor = Color.Black;
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(191, 15, 48);
-      loadListTable();
+             loadListTable();
          
           //  menuStrip1.Renderer = new MyRenderer();
         }
@@ -64,7 +64,7 @@ namespace ProjectHotpot
 
             }
          
-        cbListTable.DataSource = listTable;
+            cbListTable.DataSource = listTable;
             cbListTable.DisplayMember = "TableName"; 
         }
 
@@ -183,11 +183,11 @@ namespace ProjectHotpot
             Table table = new TableBUS().GetTableDetail(selected);
             if(table.TableStatus == "False")
             {
-                string [] arr = { "False", "True"};
+                string [] arr = { "Trống", "Có người"};
                 cbTableStatus.DataSource = arr;
             } else
             {
-                string[] arr = { "True", "False" };
+                string[] arr = { "Có người", "Trống" };
                 cbTableStatus.DataSource = arr;
             }
         }
@@ -196,6 +196,13 @@ namespace ProjectHotpot
         {
             string name = this.cbListTable.GetItemText(this.cbListTable.SelectedItem);
             string status = this.cbTableStatus.GetItemText(this.cbTableStatus.SelectedItem);
+            if(status == "Trống")
+            {
+                status = "False";
+            } else
+            {
+                status = "True";
+            }
             int id = Int32.Parse(name.Substring(name.Length - 1));
 
             Table newTable = new Table();
@@ -204,15 +211,24 @@ namespace ProjectHotpot
             newTable.TableStatus = status;
 
             bool result = new TableBUS().UpdateTable(newTable);
+            if(newTable.TableStatus == "")
+            {
+                result = false;
+            }
             if (result)
             {
-                MessageBox.Show("Update table sucessful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Update table successful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadListTable();
             }
             else
             {
-                MessageBox.Show("Sorry update dish fail", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sorry update table failed", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
