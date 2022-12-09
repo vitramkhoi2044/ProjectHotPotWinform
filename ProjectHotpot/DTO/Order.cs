@@ -11,7 +11,7 @@ namespace ProjectHotpot.DTO
         public int OrderID { get; set; }
         public int CustomerID { get; set; }
 
-        public int EnployeeID { get; set; }
+        public int EmployeeID { get; set; }
         public int TableID { get; set; }
 
         public int TotalPrice { get; set; }

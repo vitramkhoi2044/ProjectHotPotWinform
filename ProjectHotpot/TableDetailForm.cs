@@ -35,20 +35,20 @@ namespace ProjectHotpot
 
         private void HandleOrder(int TableID)
         {
-            //Order orders = new OrderBUS().GetOrderByTableID(TableID);
-            //if (orders != null)
-            //{
-            //    if (orders.OrderStatus == "True")
-            //    {
-            //        Employee employee = new EmployeeBUS().GetDetails(orders.EnployeeID);
-            //        cbStaff.Text = employee.EmployeeName;
-            //    }
-            //}
-            //else
+            Order orders = new OrderBUS().GetOrderByTableID(TableID);
+            if (orders != null)
+            {
+                if (orders.OrderStatus == "True")
+                {
+                    Employee employee = new EmployeeBUS().GetDetails(orders.EmployeeID);
+                    cbStaff.Text = employee.EmployeeName.ToString();
+                }
+            }
+            else
             {
                 Order newOrder = new Order();
                 newOrder.TableID = TableID;
-                newOrder.EnployeeID = 1;
+                newOrder.EmployeeID = 1;
                 newOrder.CustomerID = 1;
                 newOrder.OrderStatus = "True";
                 newOrder.CreateDate= DateTime.Now;

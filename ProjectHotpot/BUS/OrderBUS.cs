@@ -16,9 +16,9 @@ namespace ProjectHotpot.BUS
             bool result = new OrderDAO().Insert(newOrder);
             return result;
         }
-        public Order GetOrderByTableID(int tableID)
+        public Order GetOrderByTableID(int TableID)
         {
-            Order order = new OrderDAO().SelectByTableID(tableID);
+            Order order = new OrderDAO().SelectByTableID(TableID);
             if (order != null)
             {
                 return order;
