@@ -197,7 +197,6 @@ D:\Winform\ProjectHotpot\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHot
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishAddEditForm.resources
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishManagementForm.resources
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeAddEditForm.resources
-C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishViewForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishAddEditForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishManagementForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeAddEditForm.resources
@@ -495,3 +494,11 @@ E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.Ingr
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.IngredientManagementForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.MainForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.TableManagementForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.ChangePasswordForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.CustomerAddEditForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.CustomerManagementForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.IngredientAddEditForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.IngredientManagementForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.MainForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.TableManagementForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.TableDetailForm.resources

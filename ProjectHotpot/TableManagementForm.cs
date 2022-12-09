@@ -59,7 +59,7 @@ namespace ProjectHotpot
                     button.ForeColor = Color.FromArgb(0, 143, 140);
                     button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(1, 89, 88);
                 }
-                // button.Click += Button_Click;
+                button.Click += new System.EventHandler(this.btnButton_Click); ;
                 flowLayoutPanel1.Controls.Add(button);
 
             }
@@ -68,7 +68,24 @@ namespace ProjectHotpot
             cbListTable.DisplayMember = "TableName"; 
         }
 
-
+        void btnButton_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            Table table = (Table)btn.Tag;
+            if (table.TableStatus=="False")
+            {
+                MessageBox.Show("Bàn vẫn đang trống! Vui lòng update trạng thái bàn trước khi quản lý bàn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                TableDetailForm tableDetailForm = new TableDetailForm(table.TableID, table.TableName, table.TableStatus);
+                tableDetailForm.ShowDialog();
+                //if (dishAddEditForm.getUpdateStatus())
+                //{
+                //    loadListDish();
+                //}
+            }
+        }
 
 
 

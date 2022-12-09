@@ -69,6 +69,17 @@ namespace ProjectHotpot.BUS
             }
             return null;
         }
+
+        public List<Employee> GetByPosition(string position)
+        {
+            List<Employee> employees = new EmployeeDAO().SelectByPosition(position);
+            if (employees != null)
+            {
+                return employees;
+            }
+            return null;
+        }
+
         public bool UpdateEmployee(Employee newEmployee)
         {
             bool result = new EmployeeDAO().Update(newEmployee);

@@ -104,6 +104,31 @@ namespace ProjectHotpot.DAO
             }
             return null;
         }
+
+        public List<Employee> SelectByPosition(string position)
+        {
+            string query = "Select * From Employees Where Position=@Position";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Position", position);
+            DataTable dataTable = SqlDataAccessHelper.ExecuteSelectQuery(query, sqlParameters);
+            List<Employee> employees = new List<Employee>();
+            if (dataTable != null)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    Employee employee = new Employee();
+                    employee.EmployeeID = int.Parse(row["EmployeeID"].ToString());
+                    employee.EmployeeName = row["EmployeeName"].ToString();
+                    employee.Shift = row["Shift"].ToString();
+                    employee.EmployeeStatus = row["EmployeeStatus"].ToString();
+                    employee.Position = row["Position"].ToString();
+                    employee.Username = row["Username"].ToString();
+                    employees.Add(employee);
+                }
+                return employees;
+            }
+            return null;
+        }
         public bool Insert(Employee newEmployee)
         {
             string query = "Insert into Employees(EmployeeName,Shift,EmployeeStatus,Position,Username,Password) Values(@EmployeeName,@Shift,@EmployeeStatus,@Position,@Username,@Password)";
