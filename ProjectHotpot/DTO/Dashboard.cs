@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectHotpot.DTO
 {
-    public struct RevenueByDate
+    public class RevenueByDate
     {
         public string Date { get; set; }
         public decimal TotalAmount { get; set; }
@@ -14,13 +14,15 @@ namespace ProjectHotpot.DTO
 
     public class TopProduct
     {
-        public string dishName;
+        public String dishName;
         public int quantity;
     }
     public class UnderstockProduct
     {
-        public string IngredientName;
+        public String IngredientName;
         public int IngredientQuantity;
+
+        public string ExpireDate;
     }
     internal class Dashboard
     {
@@ -31,7 +33,7 @@ namespace ProjectHotpot.DTO
         public int numProducts { get;  set; }
         public List<TopProduct> TopProductsList { get;  set; }
         public List<UnderstockProduct> UnderstockList { get;  set; }
-        public List<RevenueByDate> GrossRevenueList { get; private set; }
+        public List<RevenueByDate> GrossRevenueList { get;  set; }
         public int numOrders { get; set; }
         public decimal totalRevenue { get; set; }
        

@@ -45,22 +45,25 @@
             this.btnCustomDate = new RJCodeAdvance.RJControls.RJButton();
             this.btnOkCustomDate = new RJCodeAdvance.RJControls.RJButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.lblNumOrders = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblTotalRevenue = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.chartGrossRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartTopProducts = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblDishes = new System.Windows.Forms.Label();
             this.lblCustomers = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lblDishes = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
             this.dgvUnderstock = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartGrossRevenue)).BeginInit();
@@ -87,6 +90,7 @@
             this.btnThisMonth.Text = "This  month";
             this.btnThisMonth.TextColor = System.Drawing.Color.White;
             this.btnThisMonth.UseVisualStyleBackColor = false;
+            this.btnThisMonth.Click += new System.EventHandler(this.btnThisMonth_Click);
             // 
             // dtpStartDate
             // 
@@ -123,6 +127,7 @@
             this.btnLast30Days.Text = "Last 30 days";
             this.btnLast30Days.TextColor = System.Drawing.Color.White;
             this.btnLast30Days.UseVisualStyleBackColor = false;
+            this.btnLast30Days.Click += new System.EventHandler(this.btnLast30Days_Click);
             // 
             // btnLast7Days
             // 
@@ -141,6 +146,7 @@
             this.btnLast7Days.Text = "Last 7 days";
             this.btnLast7Days.TextColor = System.Drawing.Color.White;
             this.btnLast7Days.UseVisualStyleBackColor = false;
+            this.btnLast7Days.Click += new System.EventHandler(this.btnLast7Days_Click);
             // 
             // btnToday
             // 
@@ -159,6 +165,7 @@
             this.btnToday.Text = "Today";
             this.btnToday.TextColor = System.Drawing.Color.White;
             this.btnToday.UseVisualStyleBackColor = false;
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
             // btnCustomDate
             // 
@@ -177,6 +184,7 @@
             this.btnCustomDate.Text = "Custom Date";
             this.btnCustomDate.TextColor = System.Drawing.Color.White;
             this.btnCustomDate.UseVisualStyleBackColor = false;
+            this.btnCustomDate.Click += new System.EventHandler(this.btnCustomDate_Click);
             // 
             // btnOkCustomDate
             // 
@@ -195,6 +203,7 @@
             this.btnOkCustomDate.Text = "OK";
             this.btnOkCustomDate.TextColor = System.Drawing.Color.White;
             this.btnOkCustomDate.UseVisualStyleBackColor = false;
+            this.btnOkCustomDate.Click += new System.EventHandler(this.btnOkCustomDate_Click);
             // 
             // panel4
             // 
@@ -207,16 +216,6 @@
             this.panel4.TabIndex = 2;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 16);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Number of Orders";
-            // 
             // lblNumOrders
             // 
             this.lblNumOrders.AutoSize = true;
@@ -226,6 +225,16 @@
             this.lblNumOrders.Size = new System.Drawing.Size(60, 24);
             this.lblNumOrders.TabIndex = 0;
             this.lblNumOrders.Text = "10000";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 16);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Number of Orders";
             // 
             // panel5
             // 
@@ -320,6 +329,36 @@
             this.panel6.TabIndex = 2;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(15, 73);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(114, 16);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Number of Dishes";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(15, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(136, 16);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Number of Customers";
+            // 
+            // lblDishes
+            // 
+            this.lblDishes.AutoSize = true;
+            this.lblDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDishes.Location = new System.Drawing.Point(14, 89);
+            this.lblDishes.Name = "lblDishes";
+            this.lblDishes.Size = new System.Drawing.Size(60, 24);
+            this.lblDishes.TabIndex = 0;
+            this.lblDishes.Text = "10000";
+            // 
             // lblCustomers
             // 
             this.lblCustomers.AutoSize = true;
@@ -340,36 +379,6 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Total Counter";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(15, 29);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(136, 16);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Number of Customers";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(15, 73);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(114, 16);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Number of Dishes";
-            // 
-            // lblDishes
-            // 
-            this.lblDishes.AutoSize = true;
-            this.lblDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDishes.Location = new System.Drawing.Point(14, 89);
-            this.lblDishes.Name = "lblDishes";
-            this.lblDishes.Size = new System.Drawing.Size(60, 24);
-            this.lblDishes.TabIndex = 0;
-            this.lblDishes.Text = "10000";
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
@@ -381,24 +390,43 @@
             this.panel7.TabIndex = 2;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // dgvUnderstock
+            // 
+            this.dgvUnderstock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUnderstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUnderstock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvUnderstock.Location = new System.Drawing.Point(7, 27);
+            this.dgvUnderstock.Name = "dgvUnderstock";
+            this.dgvUnderstock.Size = new System.Drawing.Size(431, 133);
+            this.dgvUnderstock.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Item";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Unit";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "ExpireDate";
+            this.Column3.Name = "Column3";
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(3, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(203, 24);
+            this.label20.Size = new System.Drawing.Size(353, 24);
             this.label20.TabIndex = 0;
-            this.label20.Text = "Products Understock";
-            // 
-            // dgvUnderstock
-            // 
-            this.dgvUnderstock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUnderstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUnderstock.Location = new System.Drawing.Point(7, 27);
-            this.dgvUnderstock.Name = "dgvUnderstock";
-            this.dgvUnderstock.Size = new System.Drawing.Size(431, 133);
-            this.dgvUnderstock.TabIndex = 1;
+            this.label20.Text = "Ingredients Understock and outdated";
             // 
             // DashboardForm
             // 
@@ -484,5 +512,8 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridView dgvUnderstock;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

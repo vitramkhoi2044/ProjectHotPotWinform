@@ -13,8 +13,10 @@ namespace ProjectHotpot.BUS
         public Dashboard GetDashboard(DateTime startDate, DateTime endDate)
         {
             Dashboard dashboard = new Dashboard();
-            dashboard.numOrders = new DashboardDAO().totalOrder();
+            dashboard.totalRevenue = new DashboardDAO().totalRevenue(startDate, endDate);
+            dashboard.numOrders = new DashboardDAO().totalOrder(startDate, endDate);
             dashboard.numProducts = new DashboardDAO().totalProduct();
+            dashboard.GrossRevenueList = new DashboardDAO().GetOrderAnalisys(startDate, endDate);
             dashboard.numCustomers = new DashboardDAO().totalCustomer();
             dashboard.TopProductsList = new DashboardDAO().GetTopProducts(startDate, endDate);
             dashboard.UnderstockList = new DashboardDAO().GetOutStockProducts();
