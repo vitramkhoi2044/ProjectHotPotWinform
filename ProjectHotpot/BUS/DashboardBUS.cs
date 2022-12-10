@@ -1,0 +1,25 @@
+﻿using ProjectHotpot.DAO;
+using ProjectHotpot.DTO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProjectHotpot.BUS
+{
+    internal class DashboardBUS
+    {
+        public Dashboard GetDashboard(DateTime startDate, DateTime endDate)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.numOrders = new DashboardDAO().totalOrder();
+            dashboard.numProducts = new DashboardDAO().totalProduct();
+            dashboard.numCustomers = new DashboardDAO().totalCustomer();
+            dashboard.TopProductsList = new DashboardDAO().GetTopProducts(startDate, endDate);
+            dashboard.UnderstockList = new DashboardDAO().GetOutStockProducts();
+            return dashboard;
+        }
+      
+    }
+}
