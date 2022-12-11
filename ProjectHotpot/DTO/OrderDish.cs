@@ -8,7 +8,9 @@ namespace ProjectHotpot.DTO
 {
     internal class OrderDish
     {
-       
+        public int ID { get; set; }
+        public int OrderID { get; set; }
+        public int DishID { get; set; }
         public string DishName { get; set; }
       
         public int DishQuantity { get; set; }

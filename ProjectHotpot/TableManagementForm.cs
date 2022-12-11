@@ -80,10 +80,6 @@ namespace ProjectHotpot
             {
                 TableDetailForm tableDetailForm = new TableDetailForm(table.TableID, table.TableName, table.TableStatus);
                 tableDetailForm.ShowDialog();
-                //if (dishAddEditForm.getUpdateStatus())
-                //{
-                //    loadListDish();
-                //}
             }
         }
 
@@ -257,5 +253,6 @@ namespace ProjectHotpot
         {
 
         }
+
     }
 }

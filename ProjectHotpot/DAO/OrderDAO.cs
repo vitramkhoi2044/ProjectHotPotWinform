@@ -114,5 +114,17 @@ namespace ProjectHotpot.DAO
             bool result = SqlDataAccessHelper.ExecuteUpdateQuery(query, sqlParameters);
             return result;
         }
+        public bool UpdateOrderStatus(Order newOrder)
+        {
+            string query = "UPDATE Orders SET  CustomerID = @CustomerID,OrderStatus = @OrderStatus, TotalQuantity = @TotalQuantity, TotalPrice = @TotalPrice  WHERE OrderID = @OrderID";
+            SqlParameter[] sqlParameters = new SqlParameter[5];
+            sqlParameters[0] = new SqlParameter("@CustomerID", newOrder.CustomerID);
+            sqlParameters[1] = new SqlParameter("@OrderStatus", newOrder.OrderStatus);
+            sqlParameters[2] = new SqlParameter("@TotalQuantity", newOrder.TotalQuantity);
+            sqlParameters[3] = new SqlParameter("@TotalPrice", newOrder.TotalPrice);
+            sqlParameters[4] = new SqlParameter("@OrderID", newOrder.OrderID);
+            bool result = SqlDataAccessHelper.ExecuteUpdateQuery(query, sqlParameters);
+            return result;
+        }
     }
 }

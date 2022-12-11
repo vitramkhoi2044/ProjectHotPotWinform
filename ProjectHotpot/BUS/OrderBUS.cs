@@ -20,6 +20,8 @@ namespace ProjectHotpot.BUS
             }
             return null;
         }
+
+
         public bool AddNewOrder(Order newOrder)
         {
             newOrder.CreateDate = DateTime.Parse(newOrder.CreateDate.ToString("yyyy-MM-dd"));
@@ -34,6 +36,11 @@ namespace ProjectHotpot.BUS
                 return order;
             }
             return null;
+        }
+        public bool UpdateOrderStatus(Order newOrder)
+        {
+            bool result = new OrderDAO().UpdateOrderStatus(newOrder);
+            return result;
         }
     }
 }
