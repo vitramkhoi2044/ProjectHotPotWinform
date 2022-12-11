@@ -503,3 +503,5 @@ E:\ProjectVS2022\PTPMUD\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotp
 E:\ProjectVS2022\PTPMUD\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.CopyComplete
 E:\ProjectVS2022\PTPMUD\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.exe
 E:\ProjectVS2022\PTPMUD\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.pdb
+E:\ProjectVS2022\PTPMUD\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderManagementForm.resources
+E:\ProjectVS2022\PTPMUD\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderDetails.resources

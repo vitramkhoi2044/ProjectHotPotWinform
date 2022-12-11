@@ -446,6 +446,7 @@
             this.Controls.Add(this.btnLast30Days);
             this.Controls.Add(this.btnThisMonth);
             this.Name = "DashboardForm";
+            this.Text = "Dashboard Form";
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

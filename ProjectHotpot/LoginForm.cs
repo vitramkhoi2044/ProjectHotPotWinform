@@ -29,7 +29,9 @@ namespace ProjectHotpot
             bool result = new EmployeeBUS().Login(userName, password);
             if (result)
             {
-                MessageBox.Show("Login Sucessful Welcome to my app", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login Sucessful!  Welcome to my app", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MainForm form = new MainForm();
+                form.Show();
             }
             else
             {

@@ -17,6 +17,31 @@ namespace ProjectHotpot.DAO
         {
             new SqlDataAccessHelper();
         }
+
+        public List<Order> SelectAll()
+        {
+            string query = "Select * From Orders";
+            DataTable dataTable = SqlDataAccessHelper.ExecuteSelectAllQuery(query);
+            List<Order> orders = new List<Order>();
+            if (dataTable.Rows.Count > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    Order order = new Order();
+                    order.OrderID = int.Parse(row["OrderID"].ToString());
+                    order.CustomerID= int.Parse(row["CustomerID"].ToString());
+                    order.TotalPrice = int.Parse(row["TotalPrice"].ToString());
+                    order.TotalQuantity = int.Parse(row["TotalQuantity"].ToString());
+                    order.EmployeeID = int.Parse(row["EmployeeID"].ToString());
+                    order.TableID = int.Parse(row["TableID"].ToString());
+                    order.CreateDate = DateTime.Parse(row["CreateDate"].ToString());    
+                    order.OrderStatus = row["OrderStatus"].ToString();
+                    orders.Add(order);
+                }
+                return orders;
+            }
+            return null;
+        }
         public Order SelectByTableID(int TableID)
         {
             string query = "Select * From Orders Where TableID = @TableID";

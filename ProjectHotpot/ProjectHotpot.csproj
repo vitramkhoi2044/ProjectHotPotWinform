@@ -269,6 +269,7 @@
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\IngredientDAO.cs" />
     <Compile Include="DAO\OrderDAO.cs" />
+    <Compile Include="DAO\OrderDishDao.cs" />
     <Compile Include="DAO\TableDAO.cs" />
     <Compile Include="DashboardForm.cs">
       <SubType>Form</SubType>
@@ -296,6 +297,8 @@
     <Compile Include="DTO\Employee.cs" />
     <Compile Include="DTO\Ingredient.cs" />
     <Compile Include="DTO\Order.cs" />
+    <Compile Include="DTO\OrderDish.cs" />
+    <Compile Include="BUS\OrderDishBUS.cs" />
     <Compile Include="DTO\Table.cs" />
     <Compile Include="EmployeeAddEditForm.cs">
       <SubType>Form</SubType>
@@ -308,6 +311,18 @@
     </Compile>
     <Compile Include="EmployeeManagementForm.Designer.cs">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDetails.Designer.cs">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderManagementForm.Designer.cs">
+      <DependentUpon>OrderManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TableDetailForm.cs">
       <SubType>Form</SubType>
@@ -378,6 +393,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeManagementForm.resx">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDetails.resx">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderManagementForm.resx">
+      <DependentUpon>OrderManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableDetailForm.resx">
       <DependentUpon>TableDetailForm.cs</DependentUpon>

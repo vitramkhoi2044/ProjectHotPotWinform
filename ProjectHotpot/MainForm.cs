@@ -206,5 +206,31 @@ namespace ProjectHotpot
             pnContent.Controls.Add(form);
             form.Show();
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            DashboardForm form = new DashboardForm()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill
+            };
+            form.MdiParent = this;
+            LayoutMdi(MdiLayout.TileHorizontal);
+            pnContent.Controls.Add(form);
+            form.Show();
+        }
+
+        private void quảnLýOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrderManagementForm form = new OrderManagementForm()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill
+            };
+            form.MdiParent = this;
+            LayoutMdi(MdiLayout.TileHorizontal);
+            pnContent.Controls.Add(form);
+            form.Show();
+        }
     }
 }

@@ -46,11 +46,14 @@
             this.serviceController2 = new System.ServiceProcess.ServiceController();
             this.rjDropdownMenu1 = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýMónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNguyênLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýThôngTinKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnContent = new System.Windows.Forms.Panel();
+            this.quảnLýOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.pnSidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +65,7 @@
             // 
             this.pnSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(15)))), ((int)(((byte)(48)))));
             this.pnSidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnSidebar.Controls.Add(this.iconButton2);
             this.pnSidebar.Controls.Add(this.iconButton1);
             this.pnSidebar.Controls.Add(this.iconButton7);
             this.pnSidebar.Controls.Add(this.iconButton6);
@@ -71,7 +75,6 @@
             this.pnSidebar.Name = "pnSidebar";
             this.pnSidebar.Size = new System.Drawing.Size(194, 450);
             this.pnSidebar.TabIndex = 0;
-          
             // 
             // iconButton1
             // 
@@ -139,7 +142,6 @@
             this.iconButton6.Text = "  iconButton2";
             this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton6.UseVisualStyleBackColor = true;
-         
             // 
             // panel1
             // 
@@ -192,8 +194,6 @@
             this.pnDashboard.Name = "pnDashboard";
             this.pnDashboard.Size = new System.Drawing.Size(584, 56);
             this.pnDashboard.TabIndex = 1;
-         
-          
             // 
             // panel2
             // 
@@ -274,19 +274,28 @@
             this.quảnLýMónĂnToolStripMenuItem,
             this.quảnLýBànToolStripMenuItem,
             this.quảnLýNguyênLiệuToolStripMenuItem,
-            this.quảnLýThôngTinKháchHàngToolStripMenuItem});
+            this.quảnLýThôngTinKháchHàngToolStripMenuItem,
+            this.quảnLýOrderToolStripMenuItem});
             this.rjDropdownMenu1.MenuItemHeight = 50;
             this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenu1.Name = "rjDropdownMenu1";
             this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(15)))), ((int)(((byte)(48)))));
-            this.rjDropdownMenu1.Size = new System.Drawing.Size(233, 114);
+            this.rjDropdownMenu1.Size = new System.Drawing.Size(233, 158);
             // 
             // quảnLýNhânViênToolStripMenuItem
             // 
+            this.quảnLýNhânViênToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đổiMậtKhẩuToolStripMenuItem});
             this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
             this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.quảnLýNhânViênToolStripMenuItem.Text = "Quản lý nhân viên";
             this.quảnLýNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNhânViênToolStripMenuItem_Click);
+            // 
+            // đổiMậtKhẩuToolStripMenuItem
+            // 
+            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
             // quảnLýMónĂnToolStripMenuItem
             // 
@@ -326,6 +335,36 @@
             this.pnContent.Name = "pnContent";
             this.pnContent.Size = new System.Drawing.Size(584, 394);
             this.pnContent.TabIndex = 4;
+            // 
+            // quảnLýOrderToolStripMenuItem
+            // 
+            this.quảnLýOrderToolStripMenuItem.Name = "quảnLýOrderToolStripMenuItem";
+            this.quảnLýOrderToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.quảnLýOrderToolStripMenuItem.Text = "Quản lý order";
+            this.quảnLýOrderToolStripMenuItem.Click += new System.EventHandler(this.quảnLýOrderToolStripMenuItem_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.UniversalAccess;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 30;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(0, 243);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton2.Size = new System.Drawing.Size(194, 64);
+            this.iconButton2.TabIndex = 3;
+            this.iconButton2.Tag = "Thống kê";
+            this.iconButton2.Text = "  iconButton2";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // MainForm
             // 
@@ -376,5 +415,8 @@
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNguyênLiệuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýThôngTinKháchHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýOrderToolStripMenuItem;
     }
 }

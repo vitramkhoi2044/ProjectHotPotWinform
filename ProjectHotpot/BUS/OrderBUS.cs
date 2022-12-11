@@ -10,6 +10,16 @@ namespace ProjectHotpot.BUS
 {
     internal class OrderBUS
     {
+
+        public List<Order> GetAll()
+        {
+            List<Order> orders = new OrderDAO().SelectAll();
+            if (orders != null)
+            {
+                return orders;
+            }
+            return null;
+        }
         public bool AddNewOrder(Order newOrder)
         {
             newOrder.CreateDate = DateTime.Parse(newOrder.CreateDate.ToString("yyyy-MM-dd"));
