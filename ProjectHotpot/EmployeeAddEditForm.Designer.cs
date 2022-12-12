@@ -165,6 +165,9 @@
             // 
             this.positionComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Position", true));
             this.positionComboBox.FormattingEnabled = true;
+            this.positionComboBox.Items.AddRange(new object[] {
+            "Staff",
+            "Manager"});
             this.positionComboBox.Location = new System.Drawing.Point(101, 177);
             this.positionComboBox.Name = "positionComboBox";
             this.positionComboBox.Size = new System.Drawing.Size(160, 24);
@@ -174,6 +177,9 @@
             // 
             this.employeeStatusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "EmployeeStatus", true));
             this.employeeStatusComboBox.FormattingEnabled = true;
+            this.employeeStatusComboBox.Items.AddRange(new object[] {
+            "Active",
+            "In-active"});
             this.employeeStatusComboBox.Location = new System.Drawing.Point(101, 129);
             this.employeeStatusComboBox.Name = "employeeStatusComboBox";
             this.employeeStatusComboBox.Size = new System.Drawing.Size(160, 24);
@@ -183,6 +189,10 @@
             // 
             this.shiftComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Shift", true));
             this.shiftComboBox.FormattingEnabled = true;
+            this.shiftComboBox.Items.AddRange(new object[] {
+            "7:30 - 14:00",
+            "14:20 - 23h00",
+            "Fulltime"});
             this.shiftComboBox.Location = new System.Drawing.Point(101, 84);
             this.shiftComboBox.Name = "shiftComboBox";
             this.shiftComboBox.Size = new System.Drawing.Size(160, 24);

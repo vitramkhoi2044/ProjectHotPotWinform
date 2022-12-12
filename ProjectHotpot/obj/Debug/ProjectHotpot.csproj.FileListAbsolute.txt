@@ -352,7 +352,6 @@ D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishAddEdi
 D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishManagementForm.resources
 D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeAddEditForm.resources
 D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeManagementForm.resources
-D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishViewForm.resources
 D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.IngredientAddEditForm.resources
 D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.IngredientManagementForm.resources
 D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.LoginForm.resources
@@ -568,3 +567,8 @@ C:\Users\Asus\OneDrive\Documents\Hoc tap\Phat trien web serverlet JSP\ProjectHot
 C:\Users\Asus\OneDrive\Documents\Hoc tap\Phat trien web serverlet JSP\ProjectHotPotWinform\ProjectHotpot\bin\Debug\System.Threading.AccessControl.xml
 C:\Users\Asus\OneDrive\Documents\Hoc tap\Phat trien web serverlet JSP\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.Fody.CopyLocal.cache
 C:\Users\Asus\OneDrive\Documents\Hoc tap\Phat trien web serverlet JSP\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.CopyComplete
+D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.CheckOutForm.resources
+D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DashboardForm.resources
+D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderDetails.resources
+D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderManagementForm.resources
+D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.TableDetailForm.resources

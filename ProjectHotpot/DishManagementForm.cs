@@ -32,7 +32,6 @@ namespace ProjectHotpot
                     dish.DishID,
                     dish.DishName,
                     dish.DishPrice,
-                    dish.Image,
                     dish.CategoryID,
                     "Edit",
                     "Delete"
@@ -58,7 +57,6 @@ namespace ProjectHotpot
                     dish.DishID,
                     dish.DishName,
                     dish.DishPrice,
-                    dish.Image,
                     dish.CategoryID,
                     "Edit",
                     "Delete"
@@ -83,7 +81,7 @@ namespace ProjectHotpot
 
         private void dgvDish_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5) //edit
+            if (e.ColumnIndex == 4) //edit
             {
                 int ID = int.Parse(dgvDish.CurrentRow.Cells[0].Value.ToString());
                 DishAddEditForm dishAddEditForm = new DishAddEditForm(ID);
@@ -93,7 +91,7 @@ namespace ProjectHotpot
                     loadListDish();
                 }
             }
-            else if (e.ColumnIndex == 6) //Delete
+            else if (e.ColumnIndex == 5) //Delete
             {
                 DialogResult dialogResult = MessageBox.Show("Are you sure?", "Confirmation", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -129,7 +127,6 @@ namespace ProjectHotpot
                             dish.DishID,
                             dish.DishName,
                             dish.DishPrice,
-                            dish.Image,
                             dish.CategoryID,
                             "Edit",
                             "Delete"

@@ -54,7 +54,6 @@ namespace ProjectHotpot
                     bool result = new EmployeeBUS().AddNewEmployee(newEmployee);
                     if (result)
                     {
-                        MessageBox.Show(newEmployee.EmployeeName);
                         MessageBox.Show("Add new employee sucessful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         addStatus = true;
                         Close();

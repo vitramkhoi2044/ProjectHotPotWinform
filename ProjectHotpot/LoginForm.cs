@@ -30,8 +30,9 @@ namespace ProjectHotpot
             if (result)
             {
                 MessageBox.Show("Login Sucessful!  Welcome to my app", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MainForm form = new MainForm();
+                MainForm form = new MainForm(userName);
                 form.Show();
+                this.Hide();
             }
             else
             {
@@ -39,7 +40,6 @@ namespace ProjectHotpot
                 txtPassword.Text = "";
                 txtUserName.Focus();
             }
-            
         }
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
@@ -71,6 +71,29 @@ namespace ProjectHotpot
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                String userName = txtUserName.Text.ToString().Trim();
+                String password = txtPassword.Text.ToString().Trim();
+                bool result = new EmployeeBUS().Login(userName, password);
+                if (result)
+                {
+                    MessageBox.Show("Login Sucessful!  Welcome to my app", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MainForm form = new MainForm(userName);
+                    form.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Your Username or Password incorrect!!! Please try again", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtPassword.Text = "";
+                    txtUserName.Focus();
+                }
+            }
         }
     }
 }

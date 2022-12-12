@@ -17,7 +17,8 @@ namespace ProjectHotpot
     {
         private int borderSize = 2;
         private Size formSize;
-        public MainForm()
+        private string userName = null;
+        public MainForm(string userName)
         {
             InitializeComponent();
             CollapseMenu();
@@ -25,7 +26,7 @@ namespace ProjectHotpot
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(191, 15, 48);
             this.WindowState = FormWindowState.Maximized;
-            
+            this.userName = userName;
         }
        
 
@@ -223,6 +224,19 @@ namespace ProjectHotpot
         private void quảnLýOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OrderManagementForm form = new OrderManagementForm()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill
+            };
+            form.MdiParent = this;
+            LayoutMdi(MdiLayout.TileHorizontal);
+            pnContent.Controls.Add(form);
+            form.Show();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm form = new ChangePasswordForm(this.userName)
             {
                 TopLevel = false,
                 Dock = DockStyle.Fill
