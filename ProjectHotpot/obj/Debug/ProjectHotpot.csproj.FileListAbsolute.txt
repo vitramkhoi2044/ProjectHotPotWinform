@@ -572,3 +572,7 @@ D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DashboardF
 D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderDetails.resources
 D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderManagementForm.resources
 D:\Winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.TableDetailForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.CheckOutForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DashboardForm.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderDetails.resources
+C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderManagementForm.resources

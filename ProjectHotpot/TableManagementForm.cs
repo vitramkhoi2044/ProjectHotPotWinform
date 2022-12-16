@@ -64,8 +64,6 @@ namespace ProjectHotpot
 
             }
          
-            cbListTable.DataSource = listTable;
-            cbListTable.DisplayMember = "TableName"; 
         }
 
         void btnButton_Click(object sender, EventArgs e)
@@ -190,54 +188,41 @@ namespace ProjectHotpot
 
         }
 
-        private void cbListTable_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            string selected = this.cbListTable.GetItemText(this.cbListTable.SelectedItem);
-            Table table = new TableBUS().GetTableDetail(selected);
-            if(table.TableStatus == "False")
-            {
-                string [] arr = { "Trống", "Có người"};
-                cbTableStatus.DataSource = arr;
-            } else
-            {
-                string[] arr = { "Có người", "Trống" };
-                cbTableStatus.DataSource = arr;
-            }
-        }
+      
 
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
-            string name = this.cbListTable.GetItemText(this.cbListTable.SelectedItem);
-            string status = this.cbTableStatus.GetItemText(this.cbTableStatus.SelectedItem);
-            if(status == "Trống")
-            {
-                status = "False";
-            } else
-            {
-                status = "True";
-            }
-            int id = Int32.Parse(name.Substring(name.Length - 1));
+        //private void rjButton1_Click(object sender, EventArgs e)
+        //{
+        //    string name = this.cbListTable.GetItemText(this.cbListTable.SelectedItem);
+        //    string status = this.cbTableStatus.GetItemText(this.cbTableStatus.SelectedItem);
+        //    if(status == "Trống")
+        //    {
+        //        status = "False";
+        //    } else
+        //    {
+        //        status = "True";
+        //    }
+        //    int id = Int32.Parse(name.Substring(name.Length - 1));
 
-            Table newTable = new Table();
-            newTable.TableID = id;
-            newTable.TableName = name;
-            newTable.TableStatus = status;
+        //    Table newTable = new Table();
+        //    newTable.TableID = id;
+        //    newTable.TableName = name;
+        //    newTable.TableStatus = status;
 
-            bool result = new TableBUS().UpdateTable(newTable);
-            if(newTable.TableStatus == "")
-            {
-                result = false;
-            }
-            if (result)
-            {
-                MessageBox.Show("Update table successful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadListTable();
-            }
-            else
-            {
-                MessageBox.Show("Sorry update table failed", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //    bool result = new TableBUS().UpdateTable(newTable);
+        //    if(newTable.TableStatus == "")
+        //    {
+        //        result = false;
+        //    }
+        //    if (result)
+        //    {
+        //        MessageBox.Show("Update table successful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        loadListTable();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Sorry update table failed", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -254,5 +239,19 @@ namespace ProjectHotpot
 
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
