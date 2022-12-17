@@ -121,7 +121,7 @@
             // 
             this.dishPriceTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dishBindingSource, "DishPrice", true));
             this.dishPriceTextBox1.Location = new System.Drawing.Point(76, 63);
-            this.dishPriceTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dishPriceTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.dishPriceTextBox1.Name = "dishPriceTextBox1";
             this.dishPriceTextBox1.Size = new System.Drawing.Size(309, 20);
             this.dishPriceTextBox1.TabIndex = 2;
@@ -134,7 +134,7 @@
             // 
             this.dishNameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dishBindingSource, "DishName", true));
             this.dishNameTextBox1.Location = new System.Drawing.Point(76, 38);
-            this.dishNameTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dishNameTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.dishNameTextBox1.Name = "dishNameTextBox1";
             this.dishNameTextBox1.Size = new System.Drawing.Size(309, 20);
             this.dishNameTextBox1.TabIndex = 1;
@@ -142,7 +142,7 @@
             // pbImageDish
             // 
             this.pbImageDish.Location = new System.Drawing.Point(198, 112);
-            this.pbImageDish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbImageDish.Margin = new System.Windows.Forms.Padding(2);
             this.pbImageDish.Name = "pbImageDish";
             this.pbImageDish.Size = new System.Drawing.Size(186, 106);
             this.pbImageDish.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -244,6 +244,7 @@
             this.ClientSize = new System.Drawing.Size(429, 451);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "DishAddEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DishAddEditForm";

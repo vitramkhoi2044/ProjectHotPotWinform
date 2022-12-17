@@ -182,6 +182,7 @@
             this.ClientSize = new System.Drawing.Size(1088, 572);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OrderManagementForm";
             this.Text = "OrderManagementForm";
             this.Load += new System.EventHandler(this.OrderManagementForm_Load);

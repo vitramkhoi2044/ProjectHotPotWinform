@@ -131,7 +131,7 @@ namespace ProjectHotpot.DAO
         public List<UnderstockProduct> GetOutStockProducts()
         {
 
-            string query = "select IngredientName, IngredientQuantity, ExpireDate from Ingredients Where IngredientQuantity <= 5 or ExpireDate < GetDate()";
+            string query = "select IngredientName, IngredientQuantity, ExpireDate from Ingredients";
             DataTable dataTable = SqlDataAccessHelper.ExecuteSelectAllQuery(query);
             List<UnderstockProduct> list = new List<UnderstockProduct>();
             if (dataTable.Rows.Count > 0)

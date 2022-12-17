@@ -38,9 +38,12 @@
             this.serviceController2 = new System.ServiceProcess.ServiceController();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -55,13 +58,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnDashboard = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,38 +78,14 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.flowLayoutPanel1);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 88);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1188, 736);
+            this.panel3.Size = new System.Drawing.Size(1548, 736);
             this.panel3.TabIndex = 2;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(656, 736);
-            this.flowLayoutPanel1.TabIndex = 2;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.Black;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.textBox2.Location = new System.Drawing.Point(12, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(222, 22);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "Chi tiết bàn";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // panel1
             // 
@@ -128,10 +105,61 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(656, 0);
+            this.panel1.Location = new System.Drawing.Point(987, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(532, 736);
+            this.panel1.Size = new System.Drawing.Size(561, 736);
             this.panel1.TabIndex = 1;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(222, 180);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(149, 21);
+            this.comboBox3.TabIndex = 30;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(10, 177);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(176, 21);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Chọn bàn đang trống:";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SeaGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(394, 170);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(128, 40);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Chuyển bàn";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(222, 131);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(298, 21);
+            this.comboBox2.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(10, 131);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(158, 21);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Nhân viên phục vụ:";
             // 
             // button1
             // 
@@ -208,7 +236,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(508, 392);
+            this.dataGridView1.Size = new System.Drawing.Size(537, 392);
             this.dataGridView1.TabIndex = 23;
             // 
             // dataGridViewTextBoxColumn1
@@ -340,56 +368,20 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Bàn";
             // 
-            // comboBox2
+            // textBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(222, 131);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(298, 21);
-            this.comboBox2.TabIndex = 27;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(10, 131);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 21);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Nhân viên phục vụ:";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SeaGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(394, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 40);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Chuyển bàn";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(10, 177);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 21);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Chọn bàn đang trống:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(222, 180);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(149, 21);
-            this.comboBox3.TabIndex = 30;
+            this.textBox2.BackColor = System.Drawing.Color.Black;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.textBox2.Location = new System.Drawing.Point(12, 15);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(222, 22);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "Chi tiết bàn";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -412,15 +404,33 @@
             this.pnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnDashboard.Location = new System.Drawing.Point(0, 0);
             this.pnDashboard.Name = "pnDashboard";
-            this.pnDashboard.Size = new System.Drawing.Size(1188, 88);
+            this.pnDashboard.Size = new System.Drawing.Size(1548, 88);
             this.pnDashboard.TabIndex = 1;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(426, 736);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(426, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(561, 736);
+            this.panel2.TabIndex = 3;
             // 
             // TableManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(15)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(1188, 824);
+            this.ClientSize = new System.Drawing.Size(1548, 824);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnDashboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -443,7 +453,6 @@
         private System.ServiceProcess.ServiceController serviceController2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -467,5 +476,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnDashboard;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

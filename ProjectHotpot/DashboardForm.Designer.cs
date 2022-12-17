@@ -98,7 +98,7 @@
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpStartDate.Location = new System.Drawing.Point(24, 17);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(101, 22);
+            this.dtpStartDate.Size = new System.Drawing.Size(101, 20);
             this.dtpStartDate.TabIndex = 1;
             // 
             // dtpEndDate
@@ -107,7 +107,7 @@
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpEndDate.Location = new System.Drawing.Point(140, 17);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(101, 22);
+            this.dtpEndDate.Size = new System.Drawing.Size(101, 20);
             this.dtpEndDate.TabIndex = 1;
             // 
             // btnLast30Days
@@ -222,7 +222,7 @@
             this.lblNumOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumOrders.Location = new System.Drawing.Point(22, 16);
             this.lblNumOrders.Name = "lblNumOrders";
-            this.lblNumOrders.Size = new System.Drawing.Size(78, 29);
+            this.lblNumOrders.Size = new System.Drawing.Size(60, 24);
             this.lblNumOrders.TabIndex = 0;
             this.lblNumOrders.Text = "10000";
             // 
@@ -232,7 +232,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 20);
+            this.label10.Size = new System.Drawing.Size(113, 16);
             this.label10.TabIndex = 0;
             this.label10.Text = "Number of Orders";
             // 
@@ -253,7 +253,7 @@
             this.lblTotalRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRevenue.Location = new System.Drawing.Point(22, 16);
             this.lblTotalRevenue.Name = "lblTotalRevenue";
-            this.lblTotalRevenue.Size = new System.Drawing.Size(78, 29);
+            this.lblTotalRevenue.Size = new System.Drawing.Size(60, 24);
             this.lblTotalRevenue.TabIndex = 0;
             this.lblTotalRevenue.Text = "10000";
             // 
@@ -263,7 +263,7 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(3, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(116, 20);
+            this.label13.Size = new System.Drawing.Size(96, 16);
             this.label13.TabIndex = 0;
             this.label13.Text = "Total Revenue";
             // 
@@ -288,6 +288,7 @@
             title1.Name = "Title1";
             title1.Text = "Gross Revenue";
             this.chartGrossRevenue.Titles.Add(title1);
+            this.chartGrossRevenue.Click += new System.EventHandler(this.chartGrossRevenue_Click);
             // 
             // chartTopProducts
             // 
@@ -335,7 +336,7 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(15, 73);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(145, 20);
+            this.label16.Size = new System.Drawing.Size(114, 16);
             this.label16.TabIndex = 1;
             this.label16.Text = "Number of Dishes";
             // 
@@ -345,7 +346,7 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(15, 29);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(174, 20);
+            this.label15.Size = new System.Drawing.Size(136, 16);
             this.label15.TabIndex = 1;
             this.label15.Text = "Number of Customers";
             // 
@@ -355,7 +356,7 @@
             this.lblDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDishes.Location = new System.Drawing.Point(14, 89);
             this.lblDishes.Name = "lblDishes";
-            this.lblDishes.Size = new System.Drawing.Size(78, 29);
+            this.lblDishes.Size = new System.Drawing.Size(60, 24);
             this.lblDishes.TabIndex = 0;
             this.lblDishes.Text = "10000";
             // 
@@ -365,7 +366,7 @@
             this.lblCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomers.Location = new System.Drawing.Point(14, 45);
             this.lblCustomers.Name = "lblCustomers";
-            this.lblCustomers.Size = new System.Drawing.Size(78, 29);
+            this.lblCustomers.Size = new System.Drawing.Size(60, 24);
             this.lblCustomers.TabIndex = 0;
             this.lblCustomers.Text = "10000";
             // 
@@ -375,7 +376,7 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(3, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(172, 29);
+            this.label14.Size = new System.Drawing.Size(136, 24);
             this.label14.TabIndex = 0;
             this.label14.Text = "Total Counter";
             // 
@@ -403,6 +404,7 @@
             this.dgvUnderstock.RowHeadersWidth = 51;
             this.dgvUnderstock.Size = new System.Drawing.Size(431, 133);
             this.dgvUnderstock.TabIndex = 1;
+            this.dgvUnderstock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUnderstock_CellContentClick);
             // 
             // Column1
             // 
@@ -428,9 +430,10 @@
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(3, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(442, 29);
+            this.label20.Size = new System.Drawing.Size(267, 24);
             this.label20.TabIndex = 0;
-            this.label20.Text = "Ingredients Understock and outdated";
+            this.label20.Text = "Nearly outdated ingredients";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // DashboardForm
             // 
@@ -449,6 +452,7 @@
             this.Controls.Add(this.btnLast7Days);
             this.Controls.Add(this.btnLast30Days);
             this.Controls.Add(this.btnThisMonth);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "DashboardForm";
             this.Text = "Dashboard Form";
             this.Load += new System.EventHandler(this.DashboardForm_Load);

@@ -55,10 +55,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(8)))), ((int)(((byte)(21)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1308, 113);
+            this.panel1.Size = new System.Drawing.Size(981, 92);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -66,10 +65,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(524, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(393, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 41);
+            this.label1.Size = new System.Drawing.Size(247, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản Lý Nguyên Liệu";
             // 
@@ -80,30 +78,27 @@
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.dgvIngredient);
-            this.panel2.Location = new System.Drawing.Point(44, 143);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(33, 116);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1215, 559);
+            this.panel2.Size = new System.Drawing.Size(911, 454);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::ProjectHotpot.Properties.Resources.image_2022_10_13_223421742;
-            this.pictureBox1.Location = new System.Drawing.Point(917, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(688, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 24);
+            this.pictureBox1.Size = new System.Drawing.Size(22, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(947, 28);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Location = new System.Drawing.Point(710, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(227, 22);
+            this.txtSearch.Size = new System.Drawing.Size(171, 20);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
@@ -113,10 +108,9 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(39, 20);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Location = new System.Drawing.Point(29, 16);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(156, 36);
+            this.btnAdd.Size = new System.Drawing.Size(117, 29);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -138,13 +132,12 @@
             this.Column6,
             this.Edit,
             this.Delete});
-            this.dgvIngredient.Location = new System.Drawing.Point(67, 76);
-            this.dgvIngredient.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvIngredient.Location = new System.Drawing.Point(50, 62);
             this.dgvIngredient.Name = "dgvIngredient";
             this.dgvIngredient.ReadOnly = true;
             this.dgvIngredient.RowHeadersVisible = false;
             this.dgvIngredient.RowHeadersWidth = 51;
-            this.dgvIngredient.Size = new System.Drawing.Size(1084, 352);
+            this.dgvIngredient.Size = new System.Drawing.Size(813, 286);
             this.dgvIngredient.TabIndex = 0;
             this.dgvIngredient.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIngredient_CellClick);
             // 
@@ -235,13 +228,13 @@
             // 
             // IngredientManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1311, 842);
+            this.ClientSize = new System.Drawing.Size(983, 684);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "IngredientManagementForm";
             this.Text = "Dish Management Form";
             this.Load += new System.EventHandler(this.IngredientManagementForm_Load);

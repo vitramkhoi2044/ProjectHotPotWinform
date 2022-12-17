@@ -200,7 +200,6 @@ C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotP
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishAddEditForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishManagementForm.resources
 E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.EmployeeAddEditForm.resources
-E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishViewForm.resources
 D:\Winform\ProjectHotpot\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DishViewForm.resources
 E:\New folder\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.AssemblyReference.cache
 E:\New folder\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.csproj.SuggestedBindingRedirects.cache
@@ -576,3 +575,8 @@ C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotP
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DashboardForm.resources
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderDetails.resources
 C:\Users\Asus\OneDrive\Documents\Hoc tap\phat trien ung dung winform\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderManagementForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.CheckOutForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.DashboardForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderDetails.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.OrderManagementForm.resources
+E:\ProjectVS2022\ProjectHotPotWinform\ProjectHotpot\obj\Debug\ProjectHotpot.TableDetailForm.resources

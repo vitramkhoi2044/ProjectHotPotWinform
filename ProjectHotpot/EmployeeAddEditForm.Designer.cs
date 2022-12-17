@@ -61,45 +61,50 @@
             // employeeNameLabel
             // 
             employeeNameLabel.AutoSize = true;
-            employeeNameLabel.Location = new System.Drawing.Point(17, 50);
+            employeeNameLabel.Location = new System.Drawing.Point(13, 41);
+            employeeNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             employeeNameLabel.Name = "employeeNameLabel";
-            employeeNameLabel.Size = new System.Drawing.Size(47, 16);
+            employeeNameLabel.Size = new System.Drawing.Size(38, 13);
             employeeNameLabel.TabIndex = 14;
             employeeNameLabel.Text = "Name:";
             // 
             // shiftLabel
             // 
             shiftLabel.AutoSize = true;
-            shiftLabel.Location = new System.Drawing.Point(17, 87);
+            shiftLabel.Location = new System.Drawing.Point(13, 71);
+            shiftLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             shiftLabel.Name = "shiftLabel";
-            shiftLabel.Size = new System.Drawing.Size(35, 16);
+            shiftLabel.Size = new System.Drawing.Size(31, 13);
             shiftLabel.TabIndex = 15;
             shiftLabel.Text = "Shift:";
             // 
             // employeeStatusLabel
             // 
             employeeStatusLabel.AutoSize = true;
-            employeeStatusLabel.Location = new System.Drawing.Point(17, 132);
+            employeeStatusLabel.Location = new System.Drawing.Point(13, 107);
+            employeeStatusLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             employeeStatusLabel.Name = "employeeStatusLabel";
-            employeeStatusLabel.Size = new System.Drawing.Size(47, 16);
+            employeeStatusLabel.Size = new System.Drawing.Size(40, 13);
             employeeStatusLabel.TabIndex = 16;
             employeeStatusLabel.Text = "Status:";
             // 
             // positionLabel
             // 
             positionLabel.AutoSize = true;
-            positionLabel.Location = new System.Drawing.Point(17, 180);
+            positionLabel.Location = new System.Drawing.Point(13, 146);
+            positionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             positionLabel.Name = "positionLabel";
-            positionLabel.Size = new System.Drawing.Size(58, 16);
+            positionLabel.Size = new System.Drawing.Size(47, 13);
             positionLabel.TabIndex = 17;
             positionLabel.Text = "Position:";
             // 
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
-            usernameLabel.Location = new System.Drawing.Point(17, 220);
+            usernameLabel.Location = new System.Drawing.Point(13, 179);
+            usernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new System.Drawing.Size(73, 16);
+            usernameLabel.Size = new System.Drawing.Size(58, 13);
             usernameLabel.TabIndex = 18;
             usernameLabel.Text = "Username:";
             // 
@@ -107,10 +112,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(8)))), ((int)(((byte)(21)))));
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Location = new System.Drawing.Point(-120, -6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(-90, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 130);
+            this.panel1.Size = new System.Drawing.Size(519, 106);
             this.panel1.TabIndex = 1;
             // 
             // lblTitle
@@ -119,10 +123,9 @@
             this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTitle.Location = new System.Drawing.Point(136, 50);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(102, 41);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(92, 41);
+            this.lblTitle.Size = new System.Drawing.Size(73, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "{title}";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -143,18 +146,18 @@
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Location = new System.Drawing.Point(17, 146);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(13, 119);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(535, 357);
+            this.panel2.Size = new System.Drawing.Size(401, 290);
             this.panel2.TabIndex = 2;
             // 
             // usernameTextBox
             // 
             this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Username", true));
-            this.usernameTextBox.Location = new System.Drawing.Point(101, 217);
+            this.usernameTextBox.Location = new System.Drawing.Point(76, 176);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(411, 22);
+            this.usernameTextBox.Size = new System.Drawing.Size(309, 20);
             this.usernameTextBox.TabIndex = 19;
             // 
             // employeeBindingSource
@@ -168,9 +171,10 @@
             this.positionComboBox.Items.AddRange(new object[] {
             "Staff",
             "Manager"});
-            this.positionComboBox.Location = new System.Drawing.Point(101, 177);
+            this.positionComboBox.Location = new System.Drawing.Point(76, 144);
+            this.positionComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.positionComboBox.Name = "positionComboBox";
-            this.positionComboBox.Size = new System.Drawing.Size(160, 24);
+            this.positionComboBox.Size = new System.Drawing.Size(121, 21);
             this.positionComboBox.TabIndex = 18;
             // 
             // employeeStatusComboBox
@@ -180,9 +184,10 @@
             this.employeeStatusComboBox.Items.AddRange(new object[] {
             "Active",
             "In-active"});
-            this.employeeStatusComboBox.Location = new System.Drawing.Point(101, 129);
+            this.employeeStatusComboBox.Location = new System.Drawing.Point(76, 105);
+            this.employeeStatusComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employeeStatusComboBox.Name = "employeeStatusComboBox";
-            this.employeeStatusComboBox.Size = new System.Drawing.Size(160, 24);
+            this.employeeStatusComboBox.Size = new System.Drawing.Size(121, 21);
             this.employeeStatusComboBox.TabIndex = 17;
             // 
             // shiftComboBox
@@ -193,17 +198,19 @@
             "7:30 - 14:00",
             "14:20 - 23h00",
             "Fulltime"});
-            this.shiftComboBox.Location = new System.Drawing.Point(101, 84);
+            this.shiftComboBox.Location = new System.Drawing.Point(76, 68);
+            this.shiftComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.shiftComboBox.Name = "shiftComboBox";
-            this.shiftComboBox.Size = new System.Drawing.Size(160, 24);
+            this.shiftComboBox.Size = new System.Drawing.Size(121, 21);
             this.shiftComboBox.TabIndex = 16;
             // 
             // employeeNameTextBox
             // 
             this.employeeNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "EmployeeName", true));
-            this.employeeNameTextBox.Location = new System.Drawing.Point(101, 47);
+            this.employeeNameTextBox.Location = new System.Drawing.Point(76, 38);
+            this.employeeNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employeeNameTextBox.Name = "employeeNameTextBox";
-            this.employeeNameTextBox.Size = new System.Drawing.Size(411, 22);
+            this.employeeNameTextBox.Size = new System.Drawing.Size(309, 20);
             this.employeeNameTextBox.TabIndex = 15;
             // 
             // btnAdd
@@ -212,10 +219,9 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(156, 262);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Location = new System.Drawing.Point(117, 213);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(121, 43);
+            this.btnAdd.Size = new System.Drawing.Size(91, 35);
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -227,10 +233,9 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(285, 262);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(214, 213);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(121, 43);
+            this.btnCancel.Size = new System.Drawing.Size(91, 35);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -242,10 +247,9 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(156, 262);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Location = new System.Drawing.Point(117, 213);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(121, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(91, 35);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -258,12 +262,12 @@
             // 
             // EmployeeAddEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 555);
+            this.ClientSize = new System.Drawing.Size(429, 451);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "EmployeeAddEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EmployeeAddEditForm";

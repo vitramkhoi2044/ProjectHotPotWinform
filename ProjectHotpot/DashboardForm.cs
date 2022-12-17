@@ -71,14 +71,18 @@ namespace ProjectHotpot
                     dgvUnderstock.Rows.Clear();
                     foreach (var item in model.UnderstockList)
                     {
-                      
-                        dgvUnderstock.Rows.Add(new object[]
+                        String date = DateTime.Today.AddDays(1).ToString("MM/dd/yyyy");
+                        if (item.ExpireDate == date)
                         {
-                        item.IngredientName,
-                        item.IngredientQuantity,
-                          item.ExpireDate
+                            dgvUnderstock.Rows.Add(new object[]
+                            {
+                                    item.IngredientName,
+                                    item.IngredientQuantity,
+                                     DateTime.Today.AddDays(1).ToString("dd/MM/yyyy")
 
-                    });
+                        });
+                        }
+                       
                     }
                 }
 
@@ -138,6 +142,21 @@ namespace ProjectHotpot
 
         private void panel4_Paint(object sender, PaintEventArgs e)
             {
+
+        }
+
+        private void dgvUnderstock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartGrossRevenue_Click(object sender, EventArgs e)
+        {
 
         }
     }
