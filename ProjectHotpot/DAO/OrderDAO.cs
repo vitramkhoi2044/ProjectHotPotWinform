@@ -82,7 +82,7 @@ namespace ProjectHotpot.DAO
                     order.CreateDate = DateTime.Parse(row["CreateDate"].ToString());
                     orders.Add(order);
                 }
-                return orders.LastOrDefault(); ;
+                return orders.LastOrDefault();
             }
             return null;
         }
@@ -123,6 +123,16 @@ namespace ProjectHotpot.DAO
             sqlParameters[2] = new SqlParameter("@TotalQuantity", newOrder.TotalQuantity);
             sqlParameters[3] = new SqlParameter("@TotalPrice", newOrder.TotalPrice);
             sqlParameters[4] = new SqlParameter("@OrderID", newOrder.OrderID);
+            bool result = SqlDataAccessHelper.ExecuteUpdateQuery(query, sqlParameters);
+            return result;
+        }
+
+        public bool UpdateOrderTableID(Order newOrder)
+        {
+            string query = "UPDATE Orders SET  TableID = @TableID WHERE OrderID = @OrderID";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@TableID", newOrder.TableID);
+            sqlParameters[1] = new SqlParameter("@OrderID", newOrder.OrderID);
             bool result = SqlDataAccessHelper.ExecuteUpdateQuery(query, sqlParameters);
             return result;
         }

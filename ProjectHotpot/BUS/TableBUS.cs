@@ -20,6 +20,16 @@ namespace ProjectHotpot.BUS
             return null;
         }
 
+        public List<Table> GetAllNotActive()
+        {
+            List<Table> tables = new TableDAO().SelectAllNOTACTIVE();
+            if (tables != null)
+            {
+                return tables;
+            }
+            return null;
+        }
+        
         public Table GetTableDetail(string name)
         {
             Table table = new TableDAO().SelectByName(name);

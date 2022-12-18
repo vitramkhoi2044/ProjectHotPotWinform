@@ -47,18 +47,18 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.cbStaff = new System.Windows.Forms.ComboBox();
             this.dgvDishes = new System.Windows.Forms.DataGridView();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.btnPay = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelTable = new System.Windows.Forms.Label();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelTable = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -71,9 +71,10 @@
             this.listViewDish.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listViewDish.HideSelection = false;
             this.listViewDish.LargeImageList = this.imageList1;
-            this.listViewDish.Location = new System.Drawing.Point(218, 90);
+            this.listViewDish.Location = new System.Drawing.Point(291, 111);
+            this.listViewDish.Margin = new System.Windows.Forms.Padding(4);
             this.listViewDish.Name = "listViewDish";
-            this.listViewDish.Size = new System.Drawing.Size(300, 362);
+            this.listViewDish.Size = new System.Drawing.Size(400, 446);
             this.listViewDish.SmallImageList = this.imageList1;
             this.listViewDish.TabIndex = 0;
             this.listViewDish.UseCompatibleStateImageBehavior = false;
@@ -98,23 +99,26 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 92);
+            this.panel1.Size = new System.Drawing.Size(692, 113);
             this.panel1.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(672, 0);
+            this.panel3.Location = new System.Drawing.Point(896, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(409, 449);
+            this.panel3.Size = new System.Drawing.Size(545, 553);
             this.panel3.TabIndex = 3;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(679, 0);
+            this.panel2.Location = new System.Drawing.Point(905, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(439, 449);
+            this.panel2.Size = new System.Drawing.Size(585, 553);
             this.panel2.TabIndex = 3;
             // 
             // label1
@@ -125,9 +129,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(184, 24);
+            this.label1.Location = new System.Drawing.Point(245, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 32);
+            this.label1.Size = new System.Drawing.Size(230, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách món";
             // 
@@ -137,9 +142,11 @@
             this.groupBox1.Controls.Add(this.tvCategory);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(-1, 90);
+            this.groupBox1.Location = new System.Drawing.Point(-1, 111);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(216, 359);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(288, 442);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh mục";
@@ -152,9 +159,10 @@
             this.tvCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tvCategory.ForeColor = System.Drawing.SystemColors.Window;
             this.tvCategory.ItemHeight = 30;
-            this.tvCategory.Location = new System.Drawing.Point(3, 16);
+            this.tvCategory.Location = new System.Drawing.Point(4, 19);
+            this.tvCategory.Margin = new System.Windows.Forms.Padding(4);
             this.tvCategory.Name = "tvCategory";
-            this.tvCategory.Size = new System.Drawing.Size(210, 340);
+            this.tvCategory.Size = new System.Drawing.Size(280, 419);
             this.tvCategory.TabIndex = 0;
             this.tvCategory.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvCategory_AfterSelect);
             // 
@@ -170,9 +178,10 @@
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.labelTable);
-            this.panel5.Location = new System.Drawing.Point(516, 0);
+            this.panel5.Location = new System.Drawing.Point(806, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(492, 449);
+            this.panel5.Size = new System.Drawing.Size(537, 552);
             this.panel5.TabIndex = 3;
             // 
             // btnUpdate
@@ -181,9 +190,10 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(31, 402);
+            this.btnUpdate.Location = new System.Drawing.Point(41, 495);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(135, 40);
+            this.btnUpdate.Size = new System.Drawing.Size(180, 49);
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -192,9 +202,10 @@
             // cbStaff
             // 
             this.cbStaff.FormattingEnabled = true;
-            this.cbStaff.Location = new System.Drawing.Point(227, 56);
+            this.cbStaff.Location = new System.Drawing.Point(303, 69);
+            this.cbStaff.Margin = new System.Windows.Forms.Padding(4);
             this.cbStaff.Name = "cbStaff";
-            this.cbStaff.Size = new System.Drawing.Size(163, 21);
+            this.cbStaff.Size = new System.Drawing.Size(216, 24);
             this.cbStaff.TabIndex = 16;
             // 
             // dgvDishes
@@ -235,7 +246,8 @@
             this.dgvDishes.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDishes.EnableHeadersVisualStyles = false;
             this.dgvDishes.GridColor = System.Drawing.Color.White;
-            this.dgvDishes.Location = new System.Drawing.Point(16, 89);
+            this.dgvDishes.Location = new System.Drawing.Point(21, 110);
+            this.dgvDishes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDishes.Name = "dgvDishes";
             this.dgvDishes.ReadOnly = true;
             this.dgvDishes.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -251,105 +263,41 @@
             this.dgvDishes.RowHeadersWidth = 51;
             this.dgvDishes.RowTemplate.DividerHeight = 1;
             this.dgvDishes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDishes.Size = new System.Drawing.Size(474, 273);
+            this.dgvDishes.Size = new System.Drawing.Size(514, 336);
             this.dgvDishes.TabIndex = 15;
             this.dgvDishes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDishes_CellClick);
             this.dgvDishes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDishes_CellContentClick);
             this.dgvDishes.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDishes_CellMouseEnter);
             this.dgvDishes.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDishes_CellMouseMove);
             // 
-            // txtTotal
-            // 
-            this.txtTotal.BackColor = System.Drawing.SystemColors.Control;
-            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(317, 368);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(134, 22);
-            this.txtTotal.TabIndex = 14;
-            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnPay
-            // 
-            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(8)))), ((int)(((byte)(21)))));
-            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPay.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(200, 402);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(299, 40);
-            this.btnPay.TabIndex = 13;
-            this.btnPay.Text = "Thanh toán";
-            this.btnPay.UseVisualStyleBackColor = false;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(79, 365);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tổng tiền:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(223, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 21);
-            this.label4.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nhân viên phục vụ:";
-            // 
-            // labelTable
-            // 
-            this.labelTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTable.AutoSize = true;
-            this.labelTable.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTable.Location = new System.Drawing.Point(234, 23);
-            this.labelTable.Name = "labelTable";
-            this.labelTable.Size = new System.Drawing.Size(46, 25);
-            this.labelTable.TabIndex = 0;
-            this.labelTable.Text = "Bàn";
-            // 
             // colID
             // 
-            this.colID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colID.HeaderText = "ID";
+            this.colID.MinimumWidth = 6;
             this.colID.Name = "colID";
             this.colID.ReadOnly = true;
+            this.colID.Width = 40;
             // 
             // colName
             // 
-            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colName.FillWeight = 115F;
             this.colName.HeaderText = "Tên món";
             this.colName.MinimumWidth = 6;
             this.colName.Name = "colName";
             this.colName.ReadOnly = true;
+            this.colName.Width = 125;
             // 
             // colQuantity
             // 
-            this.colQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colQuantity.HeaderText = "Số lượng";
             this.colQuantity.MinimumWidth = 6;
             this.colQuantity.Name = "colQuantity";
             this.colQuantity.ReadOnly = true;
             this.colQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colQuantity.Width = 85;
             // 
             // colPrice
             // 
@@ -392,15 +340,90 @@
             this.dgv_btnDelete.ReadOnly = true;
             this.dgv_btnDelete.Width = 70;
             // 
+            // txtTotal
+            // 
+            this.txtTotal.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(302, 454);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(179, 27);
+            this.txtTotal.TabIndex = 14;
+            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(8)))), ((int)(((byte)(21)))));
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Location = new System.Drawing.Point(233, 495);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(399, 49);
+            this.btnPay.TabIndex = 13;
+            this.btnPay.Text = "Thanh toán";
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(105, 449);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tổng tiền:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(297, 69);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 28);
+            this.label4.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(41, 69);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(195, 28);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nhân viên phục vụ:";
+            // 
+            // labelTable
+            // 
+            this.labelTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTable.AutoSize = true;
+            this.labelTable.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTable.Location = new System.Drawing.Point(312, 28);
+            this.labelTable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTable.Name = "labelTable";
+            this.labelTable.Size = new System.Drawing.Size(55, 31);
+            this.labelTable.TabIndex = 0;
+            this.labelTable.Text = "Bàn";
+            // 
             // TableDetailForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 492);
+            this.ClientSize = new System.Drawing.Size(1372, 606);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listViewDish);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TableDetailForm";
             this.Text = "Quản lý bàn chi tiết";
             this.Load += new System.EventHandler(this.DishViewForm_Load);
@@ -417,7 +440,6 @@
         #endregion
 
         private System.Windows.Forms.ListView listViewDish;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -440,5 +462,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
         private System.Windows.Forms.DataGridViewButtonColumn dgv_btnDelete;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

@@ -272,7 +272,7 @@ namespace ProjectHotpot
         private void btnPay_Click(object sender, EventArgs e)
         {
             this.flag = true;
-            CheckOutForm checkOutForm = new CheckOutForm(this.OrderID);
+            CheckOutForm checkOutForm = new CheckOutForm(this.OrderID,this.table.TableID);
             checkOutForm.ShowDialog();
             this.Close();
         }

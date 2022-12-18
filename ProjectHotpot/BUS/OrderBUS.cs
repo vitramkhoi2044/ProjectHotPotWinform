@@ -24,7 +24,7 @@ namespace ProjectHotpot.BUS
 
         public bool AddNewOrder(Order newOrder)
         {
-            newOrder.CreateDate = DateTime.Parse(newOrder.CreateDate.ToString("yyyy-MM-dd"));
+            
             bool result = new OrderDAO().Insert(newOrder);
             return result;
         }
@@ -40,6 +40,12 @@ namespace ProjectHotpot.BUS
         public bool UpdateOrderStatus(Order newOrder)
         {
             bool result = new OrderDAO().UpdateOrderStatus(newOrder);
+            return result;
+        }
+
+        public bool UpdateOrderTableID(Order newOrder)
+        {
+            bool result = new OrderDAO().UpdateOrderTableID(newOrder);
             return result;
         }
     }

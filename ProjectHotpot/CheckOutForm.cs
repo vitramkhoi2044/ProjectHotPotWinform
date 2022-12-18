@@ -23,12 +23,14 @@ namespace ProjectHotpot
     public partial class CheckOutForm : Form
     {
         private int orderID;
+        private Table table=new Table();
         private int TotalPrice=0;
         private int TotalQuantity=0;
-        public CheckOutForm(int orderID)
+        public CheckOutForm(int orderID,int tableID)
         {
             InitializeComponent();
             this.orderID = orderID;
+            this.table.TableID = tableID;
         }
         private void CheckOutForm_Load(object sender, EventArgs e)
         {
@@ -81,7 +83,10 @@ namespace ProjectHotpot
             order.TotalQuantity = this.TotalQuantity;
             order.CustomerID = selected.CustomerID;
             bool result = new OrderBUS().UpdateOrderStatus(order);
-            if (result)
+            this.table.TableStatus = "False";
+            bool result2 = new TableBUS().UpdateTable(this.table);
+
+            if (result && result2)
             {
                 MessageBox.Show("Thanh toán thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
