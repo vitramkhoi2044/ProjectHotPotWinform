@@ -33,26 +33,39 @@ namespace ProjectHotpot
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            string newPassword = txtNewPassword.Text.ToString();
-            string rePassword = txtRePassword.Text.ToString();
-            if (newPassword.Equals(rePassword))
+            string currentPassword = txtCurrentPassword.Text.ToString().Trim();
+            string newPassword = txtNewPassword.Text.ToString().Trim(); 
+            string rePassword = txtRePassword.Text.ToString().Trim();
+            if (newPassword != "" && currentPassword != "")
             {
-                bool result = new EmployeeBUS().ChangePassword(userName, newPassword);
-                if (result)
+                if (newPassword.Equals(rePassword))
                 {
-                    MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
+                    bool result = new EmployeeBUS().ChangePassword(userName, newPassword, currentPassword);
+                    if (result)
+                    {
+                        MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thay đổi mật khẩu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtCurrentPassword.Text = "";
+                        txtNewPassword.Text = "";
+                        txtRePassword.Text = "";
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Thay đổi mật khẩu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mật khẩu nhập lại không trùng khớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCurrentPassword.Text = "";
                     txtNewPassword.Text = "";
                     txtRePassword.Text = "";
                 }
             }
             else
             {
-                MessageBox.Show("Mật khẩu nhập lại không trùng khớp","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Thay đổi mật khẩu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCurrentPassword.Text = "";
                 txtNewPassword.Text = "";
                 txtRePassword.Text = "";
             }

@@ -183,6 +183,7 @@ namespace ProjectHotpot
             List<Table> table = new TableBUS().GetAllNotActive();
             cbTable.DataSource = table;
             cbTable.DisplayMember = "TableName";
+            txtTotal.Text = "";
             dgvDishes.Rows.Clear();
             dgvDishes.Refresh();
         }
@@ -435,6 +436,7 @@ namespace ProjectHotpot
                     {
                         MessageBox.Show("Delete dish successful", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dgvDishes.Rows.Remove(dgvDishes.Rows[e.RowIndex]);
+                        CalculateTotal();
                         this.flag = true;
                     }
                     else

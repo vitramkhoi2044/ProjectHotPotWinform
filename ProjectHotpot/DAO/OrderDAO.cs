@@ -20,7 +20,7 @@ namespace ProjectHotpot.DAO
 
         public List<Order> SelectAll()
         {
-            string query = "Select * From Orders";
+            string query = "Select * From Orders Where OrderStatus = 0";
             DataTable dataTable = SqlDataAccessHelper.ExecuteSelectAllQuery(query);
             List<Order> orders = new List<Order>();
             if (dataTable.Rows.Count > 0)

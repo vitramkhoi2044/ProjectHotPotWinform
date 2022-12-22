@@ -40,10 +40,15 @@ namespace ProjectHotpot.BUS
             }
             return false;
         }
-        public bool ChangePassword(String userName, String newPassword)
+        public bool ChangePassword(String userName, String newPassword, String currentPassword)
         {
-            newPassword = HelperMethod.Encrypt(newPassword);
-            bool result = new EmployeeDAO().UpdatePasswordByUserName(userName, newPassword);
+            Employee employee = new EmployeeDAO().SelectByUsername(userName);
+            bool result = false;
+            if (employee != null && HelperMethod.Decrypt(employee.Password).Equals(currentPassword))
+            {
+                newPassword = HelperMethod.Encrypt(newPassword);
+                result = new EmployeeDAO().UpdatePasswordByUserName(userName, newPassword);
+            }
             return result;
         }
         public bool AddNewEmployee(Employee newEmployee)
